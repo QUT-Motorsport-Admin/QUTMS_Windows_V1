@@ -12,7 +12,7 @@ using System.Threading;
 
 namespace QEV1_Windows {
     public partial class Form1 : Form {
-
+        //variables
         const int disconect = 1;
         const int connect = 128;
         bool[] connectSerialBool = new bool[2] { true, true };
