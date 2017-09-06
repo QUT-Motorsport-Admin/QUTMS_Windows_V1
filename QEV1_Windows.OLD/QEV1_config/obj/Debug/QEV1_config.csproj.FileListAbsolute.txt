@@ -1,0 +1,18 @@
+c:\users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\bin\Debug\QEV1_config.exe.config
+c:\users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\bin\Debug\QEV1_config.exe
+c:\users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\bin\Debug\QEV1_config.pdb
+c:\users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\obj\Debug\QEV1_config.csprojResolveAssemblyReference.cache
+c:\users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\obj\Debug\QEV1_config.Form1.resources
+c:\users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\obj\Debug\QEV1_config.Properties.Resources.resources
+c:\users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\obj\Debug\QEV1_config.csproj.GenerateResource.Cache
+c:\users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\obj\Debug\QEV1_config.exe
+c:\users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\obj\Debug\QEV1_config.pdb
+C:\Users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\bin\Debug\QEV1_config.exe.manifest
+C:\Users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\bin\Debug\QEV1_config.application
+C:\Users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\obj\Debug\QEV1_config.exe.manifest
+C:\Users\ant\documents\visual studio 2013\Projects\QEV1_config\QEV1_config\obj\Debug\QEV1_config.application
+C:\Users\sahes\git\qutms_windows\QEV1_Windows.OLD\QEV1_config\obj\Debug\QEV1_config.Form1.resources
+C:\Users\sahes\git\qutms_windows\QEV1_Windows.OLD\QEV1_config\obj\Debug\QEV1_config.Properties.Resources.resources
+C:\Users\sahes\git\qutms_windows\QEV1_Windows.OLD\QEV1_config\obj\Debug\QEV1_config.csproj.GenerateResource.Cache
+C:\Users\sahes\git\qutms_windows\QEV1_Windows.OLD\QEV1_config\obj\Debug\QEV1_config.exe
+C:\Users\sahes\git\qutms_windows\QEV1_Windows.OLD\QEV1_config\obj\Debug\QEV1_config.pdb
