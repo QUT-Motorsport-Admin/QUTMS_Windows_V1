@@ -77,6 +77,11 @@ namespace QEV1_Windows_Updated
             processIncomingBytestream();
         }
 
+        public void connectToSerial(int request) 
+        {
+            
+        }
+
         public void processIncomingBytestream()
         {
             byte tempByte;
@@ -150,6 +155,31 @@ namespace QEV1_Windows_Updated
             
         }
 
-        
+        public void sendDataToSerial(byte putVal, ushort addr_chunk, long data_chunk)
+        {
+            // Initialise the buffer to send to the serial port
+            byte[] tempBuffer = new byte[10];
+
+            // Initialise buffer zero to 68 (why?)
+            tempBuffer[0] = 68;
+
+            // Put the input value to buffer one
+            tempBuffer[1] = putVal;
+
+            // But the addr_chunk data into the buffer
+            tempBuffer[2] = (byte)(addr_chunk >> 8);        //address section top byte
+            tempBuffer[3] = (byte)addr_chunk;               //address section lower byte
+
+            // Put the data chunck into the buffer
+            tempBuffer[4] = (byte)(data_chunk >> 24);       //data section very top byte
+            tempBuffer[5] = (byte)(data_chunk >> 16);       //data section very top byte
+            tempBuffer[6] = (byte)(data_chunk >> 8);        //data Section second top byte
+            tempBuffer[7] = (byte)data_chunk;               //data section second lowest byte
+
+            // Write the data to the serial port
+            readingSerialPort.Write(tempBuffer, 0, 10);
+        }
+
+
     }
 }

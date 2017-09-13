@@ -171,146 +171,21 @@ namespace QEV1_Windows_Updated
         private void getDataTimer_Tick(object sender, EventArgs e)
         {
             try
-            {
-                /*
-                while ((serialPort1.BytesToRead > 0) /*&& (stringIndex < 60))                 //incoming bytes waiting, build the string
-                {
-                    // Read in the byte
-                    byte tempByte = (byte)serialPort1.ReadByte();
-
-                    // If the byte is a 'D' character, switch to string entry mode and begin reading string
-                    if (tempByte == 'D')
-                    {
-                        stringMode = 1;
-                        stringIndex = 0;
-
-                    }
-
-                    // If in string entry mode, continue reading in string
-                    else if (stringMode == 1)
-                    {
-                        incomingString[stringIndex] = tempByte;     //copy the byte into incoming buffer
-                        stringIndex = stringIndex + 1;              //increment the index
-                    }
-
-                    // If we have reached the end of the byte, switch stringMode appropriately
-                    if (stringIndex > 31)
-                    {
-                        stringMode = 2;
-                    }
-                }
-
-                if (stringMode == 2)                    //buffer complete so process
-                {
-
-                    //rebuild the decimal 68 bytes
-                    //process the packet
-                    stringMode = 0;                     //rest mode to 0 for next time
-
-                    //restore the 68s
-                    for (int i = 0; i < 4; i++)
-                    {
-                        for (int j = 0; j < 7; j++)
-                        {
-                            if ((incomingString[i + 28] & (1 << j)) > 0) incomingString[(i * 7) + j] = 68;
-                        }
-                    }
-
-                    //Decide which packet type is incoming and update the relevant data
-
-                    byte headerType = incomingString[1];
-
-                    if (headerType < 10) drawTab(OVERVIEW, headerType);
-
-                    decimal tempDecimal = (incomingString[2] << 8) + incomingString[3];
-                    //AvgVolts.Text = (tempDecimal / 1000).ToString("F3");
-
-                    tempDecimal = (incomingString[4] << 8) + incomingString[5];
-                    //AvgTemp.Text = (tempDecimal / 1000).ToString("F1");
-
-
-                    tempDecimal = (incomingString[2] << 8) + incomingString[3];
-                    avgVoltsLabel.Text = (tempDecimal / 1000).ToString("F3");
-
-
-                    tempDecimal = (incomingString[12] << 8) + incomingString[13];
-                    maxCellTempLabel.Text = (tempDecimal).ToString();
-
-
-                    tempDecimal = ((incomingString[16] << 8) + incomingString[17]) - 500;
-                    DCcurrentLabel.Text = (tempDecimal).ToString();
-
-                    tempDecimal = (incomingString[14] << 8) + incomingString[15];
-                    inverterTempLabel.Text = (tempDecimal).ToString();
-
-
-                    tempDecimal = (incomingString[18] << 8) + incomingString[19];
-                    coolantTempLabel.Text = (tempDecimal / 10).ToString("F1");
-                    tempDecimal = (incomingString[8] << 8) + incomingString[9];
-                    //Volts1.Text = (tempDecimal / 1000).ToString("F3");
-                    tempDecimal = (incomingString[10] << 8) + incomingString[11];
-                    //Volts2.Text = (tempDecimal / 1000).ToString("F3");
-                    tempDecimal = (incomingString[12] << 8) + incomingString[13];
-                    //Volts3.Text = (tempDecimal / 1000).ToString("F3");
-                    tempDecimal = (incomingString[14] << 8) + incomingString[15];
-                    //Volts4.Text = (tempDecimal / 1000).ToString("F3");
-                    tempDecimal = (incomingString[16] << 8) + incomingString[17];
-                    //Volts5.Text = (tempDecimal / 1000).ToString("F3");
-                    tempDecimal = (incomingString[18] << 8) + incomingString[19];
-                    //Volts6.Text = (tempDecimal / 1000).ToString("F3");
-                    tempDecimal = (incomingString[20] << 8) + incomingString[21];
-                    //Volts7.Text = (tempDecimal / 1000).ToString("F3");
-
-                    tempDecimal = (incomingString[22] << 8) + incomingString[23];
-                    throttleLabel.Text = (tempDecimal * 100 / 512).ToString("F1");
-                    tempDecimal = (incomingString[24] << 8) + incomingString[25];
-                    RPM.Text = (tempDecimal).ToString();
-
-                    tempDecimal = (incomingString[26]);
-                    if (tempDecimal > 0)
-                    {
-                        Enable1.Text = "True";
-                        Enable1.ForeColor = System.Drawing.Color.Green;
-                    }
-
-                    else
-                    {
-                        Enable1.Text = "False";
-                        Enable1.ForeColor = System.Drawing.Color.Red;
-                    }
-
-                }
-                */
-
+            {                
                 SerialCommunication serialcomm = new SerialCommunication(serialPort1);
                 
-                /*
-                 * TODO: Move the code below to the SerialCommunicaiton Class
-                byte[] tempBuffer = new byte[10];
-
-                tempBuffer[0] = 68;                                                                     //capital 'D' in decimal ascii (the preserved character)
-                if (mainScreenTabControl.SelectedTab == Accumulators_Tab) tempBuffer[1] = 2;            //packet type 2
-                else if (mainScreenTabControl.SelectedTab == Inverters_Tab) tempBuffer[1] = 3;          //packet type 3
-                else if (mainScreenTabControl.SelectedTab == TorqueVectoring_Tab) tempBuffer[1] = 4;    //packet type 4
-                else if (mainScreenTabControl.SelectedTab == GLV_Tab) tempBuffer[1] = 5;                //packet type 5
-                else if (mainScreenTabControl.SelectedTab == Cooling_Tab) tempBuffer[1] = 6;            //packet type 6
-                else if (mainScreenTabControl.SelectedTab == Safety_Tab) tempBuffer[1] = 7;             //packet type 7
-                else if (mainScreenTabControl.SelectedTab == Safety_Tab) tempBuffer[1] = 8;             //packet type 8
-                else if (mainScreenTabControl.SelectedTab == Diagnostics_Tab) tempBuffer[1] = 9;        //packet type 9
-                else tempBuffer[1] = 1;                                                                 //packet type 1 is the default
-
-                tempBuffer[2] = (byte)(addr_chunk >> 8);        //address section top byte
-                tempBuffer[3] = (byte)addr_chunk;               //address section lower byte
-                tempBuffer[4] = (byte)(data_chunk >> 24);       //data section very top byte
-                tempBuffer[5] = (byte)(data_chunk >> 16);       //data section very top byte
-                tempBuffer[6] = (byte)(data_chunk >> 8);        //data Section second top byte
-                tempBuffer[7] = (byte)data_chunk;               //data section second lowest byte
-
-                serialPort1.Write(tempBuffer, 0, 10);
+                if (mainScreenTabControl.SelectedTab == Accumulators_Tab) serialcomm.sendDataToSerial(2, addr_chunk, data_chunk);            //packet type 2
+                else if (mainScreenTabControl.SelectedTab == Inverters_Tab) serialcomm.sendDataToSerial(3, addr_chunk, data_chunk);          //packet type 3
+                else if (mainScreenTabControl.SelectedTab == TorqueVectoring_Tab) serialcomm.sendDataToSerial(4, addr_chunk, data_chunk);    //packet type 4
+                else if (mainScreenTabControl.SelectedTab == GLV_Tab) serialcomm.sendDataToSerial(5, addr_chunk, data_chunk);                //packet type 5
+                else if (mainScreenTabControl.SelectedTab == Cooling_Tab) serialcomm.sendDataToSerial(6, addr_chunk, data_chunk);            //packet type 6
+                else if (mainScreenTabControl.SelectedTab == Safety_Tab) serialcomm.sendDataToSerial(7, addr_chunk, data_chunk);             //packet type 7
+                else if (mainScreenTabControl.SelectedTab == Safety_Tab) serialcomm.sendDataToSerial(8, addr_chunk, data_chunk);             //packet type 8
+                else if (mainScreenTabControl.SelectedTab == Diagnostics_Tab) serialcomm.sendDataToSerial(9, addr_chunk, data_chunk);        //packet type 9
+                else serialcomm.sendDataToSerial(1, addr_chunk, data_chunk);
 
                 addr_chunk = 0;
-                data_chunk = 0;                                 //reset the temporary holders
-                */
+                data_chunk = 0;
 
                 Thread.Sleep(10);
             }
