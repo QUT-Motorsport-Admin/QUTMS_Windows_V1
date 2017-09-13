@@ -56,6 +56,8 @@ namespace QEV1_Windows_Updated
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO Move anything serial to the SerialCommunication class, so that it 
+            // is completely abstracted from the GUI
             serial = new Serial();
             scanSerials(errorsDisabled);
 
@@ -63,6 +65,8 @@ namespace QEV1_Windows_Updated
 
         private void statusCOMnumber_Click(object sender, EventArgs e)
         {
+            // TODO Move anything serial to the SerialCommunication class, so that it 
+            // is completely abstracted from the GUI
             portNumberIndex++;
             if (portNumberIndex > serial.PortNumberMax) portNumberIndex = 0;
             if (serial.PortsExist()) statusCOMnumber.Text = serial.getPort(portNumberIndex);
@@ -74,13 +78,17 @@ namespace QEV1_Windows_Updated
 
         private void statusConnectionStatus_Click(object sender, EventArgs e)
         {
+            // TODO Move anything serial to the SerialCommunication class, so that it 
+            // is completely abstracted from the GUI
             if (ECUconnected) connectSerial(DISCONNECT);
             else connectSerial(CONNECT);
         }
 
         private void scanSerials(bool errorMode)
         {
-            
+
+            // TODO Move anything serial to the SerialCommunication class, so that it 
+            // is completely abstracted from the GUI
 
             if (serial.PortsExist())
             {
@@ -115,6 +123,8 @@ namespace QEV1_Windows_Updated
 
         private void connectSerial(int request)
         {
+            // TODO Move anything to the SerialCommunication class, so that it 
+            // is completely abstracted from the GUI
             try
             {
                 if (serial.PortsExist())
