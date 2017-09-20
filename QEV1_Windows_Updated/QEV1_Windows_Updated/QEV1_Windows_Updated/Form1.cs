@@ -26,7 +26,7 @@ namespace QEV1_Windows_Updated
         const int CONNECT = 128;
         const int DISCONNECT = 1;
         bool ECUconnected = false;
-        int portNumberIndex = 0;
+        //int portNumberIndex = 0;
 
         //int portNumberMax;
         bool errorsEnabled = true;
@@ -45,6 +45,8 @@ namespace QEV1_Windows_Updated
 
         public const int OVERVIEW = 1;
 
+        SerialCommunication qevSerialCom;
+
 
 
 
@@ -58,8 +60,11 @@ namespace QEV1_Windows_Updated
         {
             // TODO Move anything serial to the SerialCommunication class, so that it 
             // is completely abstracted from the GUI
-            serial = new Serial();
-            scanSerials(errorsDisabled);
+            //serial = new Serial();
+            //scanSerials(errorsDisabled);
+            qevSerialCom = new SerialCommunication(serialPort1);
+
+
 
         }
 
@@ -67,13 +72,7 @@ namespace QEV1_Windows_Updated
         {
             // TODO Move anything serial to the SerialCommunication class, so that it 
             // is completely abstracted from the GUI
-            portNumberIndex++;
-            if (portNumberIndex > serial.PortNumberMax) portNumberIndex = 0;
-            if (serial.PortsExist()) statusCOMnumber.Text = serial.getPort(portNumberIndex);
-            else
-            {
-                statusCOMnumber.Text = "No Ports";
-            }
+            statusCOMnumber.Text = qevSerialCom.incrementPort();
         }
 
         private void statusConnectionStatus_Click(object sender, EventArgs e)
@@ -90,17 +89,19 @@ namespace QEV1_Windows_Updated
             // TODO Move anything serial to the SerialCommunication class, so that it 
             // is completely abstracted from the GUI
 
-            if (serial.PortsExist())
+            if (qevSerialCom.scanSerials(errorMode))
             {
                 // Set starting point for port searching
-                portNumberIndex = 0;
+                qevSerialCom.resetPort();
 
                 // Update GUI to show number of ports
-                statusCOMnumber.Text = serial.getPort(serial.PortNumberMax);
+                //statusCOMnumber.Text = serial.getPort(serial.PortNumberMax);
+                statusCOMnumber.Text = qevSerialCom.getNumberofPorts();
 
                 // Set SerialPort properties
-                serialPort1.ReadTimeout = 10000;
-                serialPort1.BaudRate = 19200;
+                //serialPort1.ReadTimeout = 10000;
+                //serialPort1.BaudRate = 19200;
+                qevSerialCom.setTimeoutAndBaud(10000, 19200);
             }
 
             else
@@ -109,6 +110,7 @@ namespace QEV1_Windows_Updated
                 statusConnectionStatus.Text = "No Ports";
                 statusConnectionStatus.BackColor = Color.Yellow;
                 
+                // UP TO HERE (Shane 20/09)
                 ECUconnected = false;
                 connectSerial(DISCONNECT);
                 getDataTimer.Enabled = false;

@@ -65,16 +65,64 @@ namespace QEV1_Windows_Updated
         private decimal enable;
         private const int INDEX_ENABLE = 26;
 
-        SerialPort readingSerialPort;
+        public const int DISCONNECT = 1;
+        public const int CONNECT = 128;
+
+        SerialPort qevSerialPort;
+        Serial qevSerial;
+
+        private int portNumberIndex;
+        private bool ECUconnected;
+        
+
         int messageMode;
         int messageIndex;
         byte[] incomingMessage;
 
         public SerialCommunication (SerialPort serialPortIn)
-        {
-            readingSerialPort = serialPortIn;
+        {   
+            // Initialise objects
+            qevSerial = new Serial();
+            portNumberIndex = 0;
+            ECUconnected = false;
+
+            qevSerialPort = serialPortIn;
             incomingMessage = new byte[MESSAGESIZE];
             processIncomingBytestream();
+        }
+
+        public bool scanSerials(bool errorMode)
+        {
+            return qevSerial.PortsExist();
+        }
+
+        public void setTimeoutAndBaud(int timeout, int baud)
+        {
+            qevSerialPort.ReadTimeout = timeout;
+            qevSerialPort.BaudRate = baud;
+        }
+
+        public void resetPort()
+        {
+            portNumberIndex = 0;
+        }
+
+        public string getNumberofPorts()
+        {
+            return qevSerial.getPort(qevSerial.PortNumberMax);
+        }
+
+        public string incrementPort()
+        {
+            portNumberIndex++;
+            if (portNumberIndex > qevSerial.PortNumberMax) resetPort();
+            if (qevSerial.PortsExist())
+            {
+                return qevSerial.getPort(portNumberIndex);
+            } else
+            {
+                return "No Ports";
+            }
         }
 
         public void connectToSerial(int request) 
@@ -87,9 +135,9 @@ namespace QEV1_Windows_Updated
             byte tempByte;
             
             // While there is still information to be processed
-            while (readingSerialPort.BytesToRead > 0)
+            while (qevSerialPort.BytesToRead > 0)
             {
-                tempByte = (byte)readingSerialPort.ReadByte();
+                tempByte = (byte)qevSerialPort.ReadByte();
                 if (messageMode == READYMODE)
                 {
                     // Wait for the signal to start reading (a 'D' character)
@@ -177,7 +225,7 @@ namespace QEV1_Windows_Updated
             tempBuffer[7] = (byte)data_chunk;               //data section second lowest byte
 
             // Write the data to the serial port
-            readingSerialPort.Write(tempBuffer, 0, 10);
+            qevSerialPort.Write(tempBuffer, 0, 10);
         }
 
 
