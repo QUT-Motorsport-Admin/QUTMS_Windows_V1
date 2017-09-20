@@ -4,3 +4,9 @@ D:\Users\John\Desktop\UNI Files\QUT Motor Sports\QEV1_Windows new\QEV1_Windows\L
 D:\Users\John\Desktop\UNI Files\QUT Motor Sports\QEV1_Windows new\QEV1_Windows\Low_Level_Functions_Library\bin\Debug\Low_Level_Functions_Library.pdb
 D:\Users\John\Desktop\UNI Files\QUT Motor Sports\QEV1_Windows new\QEV1_Windows\Low_Level_Functions_Library\obj\Debug\Low_Level_Functions_Library.dll
 D:\Users\John\Desktop\UNI Files\QUT Motor Sports\QEV1_Windows new\QEV1_Windows\Low_Level_Functions_Library\obj\Debug\Low_Level_Functions_Library.pdb
+D:\QUT Motorsport\QUTMS_Windows\Low_Level_Functions_Library\bin\Debug\Low_Level_Functions_Library.dll
+D:\QUT Motorsport\QUTMS_Windows\Low_Level_Functions_Library\bin\Debug\Low_Level_Functions_Library.pdb
+D:\QUT Motorsport\QUTMS_Windows\Low_Level_Functions_Library\obj\Debug\Low_Level_Functions_Library.csprojResolveAssemblyReference.cache
+D:\QUT Motorsport\QUTMS_Windows\Low_Level_Functions_Library\obj\Debug\Low_Level_Functions_Library.csproj.CoreCompileInputs.cache
+D:\QUT Motorsport\QUTMS_Windows\Low_Level_Functions_Library\obj\Debug\Low_Level_Functions_Library.dll
+D:\QUT Motorsport\QUTMS_Windows\Low_Level_Functions_Library\obj\Debug\Low_Level_Functions_Library.pdb

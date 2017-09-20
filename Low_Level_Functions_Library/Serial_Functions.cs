@@ -58,7 +58,12 @@ namespace Low_Level_Functions_Library
             return ECUconnected;
         }
         public static string returnPortNumber() {
-            return portList[portList.Length - 1];
+            if (portList.Length > 0) {
+                return portList[portList.Length - 1];
+            }
+            else {
+                return null;
+            }
         }
 
         public static bool[] connectSerialLogic(int request) {
