@@ -21,3 +21,15 @@ C:\Users\sahes\git\qutms_windows\QEV1_Windows\obj\Debug\QEV1_Windows.Properties.
 C:\Users\sahes\git\qutms_windows\QEV1_Windows\obj\Debug\QEV1_Windows.csproj.GenerateResource.Cache
 C:\Users\sahes\git\qutms_windows\QEV1_Windows\obj\Debug\QEV1_Windows.exe
 C:\Users\sahes\git\qutms_windows\QEV1_Windows\obj\Debug\QEV1_Windows.pdb
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\bin\Debug\QEV1_Windows.exe.config
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\bin\Debug\QEV1_Windows.exe
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\bin\Debug\QEV1_Windows.pdb
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\bin\Debug\Low_Level_Functions_Library.dll
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\bin\Debug\Low_Level_Functions_Library.pdb
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\obj\Debug\QEV1_Windows.csprojResolveAssemblyReference.cache
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\obj\Debug\QEV1_Windows.Form1.resources
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\obj\Debug\QEV1_Windows.Properties.Resources.resources
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\obj\Debug\QEV1_Windows.csproj.GenerateResource.Cache
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\obj\Debug\QEV1_Windows.csproj.CoreCompileInputs.cache
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\obj\Debug\QEV1_Windows.exe
+D:\QUT Motorsport\QUTMS_Windows\QEV1_Windows\obj\Debug\QEV1_Windows.pdb
