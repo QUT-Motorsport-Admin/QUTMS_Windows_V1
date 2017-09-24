@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QEV1_Windows_Updated
 {
@@ -68,18 +70,33 @@ namespace QEV1_Windows_Updated
         public const int DISCONNECT = 1;
         public const int CONNECT = 128;
 
+        public enum connectSerialCodes {
+            connectNoPorts, 
+            connectPorts,
+            disconnect
+        }
+
         SerialPort qevSerialPort;
+        System.Windows.Forms.Timer qevDataTimer;
         Serial qevSerial;
+
 
         private int portNumberIndex;
         private bool ECUconnected;
-        
+
+        ushort addr_chunk;
+        long data_chunk;
 
         int messageMode;
         int messageIndex;
         byte[] incomingMessage;
 
-        public SerialCommunication (SerialPort serialPortIn)
+        /// <summary>
+        /// Handles all of the serial communications made by the class
+        /// </summary>
+        /// <param name="serialPortIn">The input serial port object from the GUI</param>
+        /// <param name="timerIn">The input timer object from the GUI</param>
+        public SerialCommunication (SerialPort serialPortIn, System.Windows.Forms.Timer timerIn)
         {   
             // Initialise objects
             qevSerial = new Serial();
@@ -87,31 +104,54 @@ namespace QEV1_Windows_Updated
             ECUconnected = false;
 
             qevSerialPort = serialPortIn;
+            qevDataTimer = timerIn;
+
             incomingMessage = new byte[MESSAGESIZE];
             processIncomingBytestream();
         }
 
+        /// <summary>
+        /// Checks to see if there are any available serial ports
+        /// </summary>
+        /// <param name="errorMode">Nothing so far</param>
+        /// <returns>True if ports exist, false otherwise</returns>
         public bool scanSerials(bool errorMode)
         {
             return qevSerial.PortsExist();
         }
 
+        /// <summary>
+        /// Sets the serial port's timeout rate and baud rate
+        /// </summary>
+        /// <param name="timeout">The serial port's timeout rate</param>
+        /// <param name="baud">The serial port's baud rate</param>
         public void setTimeoutAndBaud(int timeout, int baud)
         {
             qevSerialPort.ReadTimeout = timeout;
             qevSerialPort.BaudRate = baud;
         }
 
+        /// <summary>
+        /// Resets where to look for ports
+        /// </summary>
         public void resetPort()
         {
             portNumberIndex = 0;
         }
 
+        /// <summary>
+        /// Gets the number of available ports
+        /// </summary>
+        /// <returns>The number of available ports</returns>
         public string getNumberofPorts()
         {
             return qevSerial.getPort(qevSerial.PortNumberMax);
         }
 
+        /// <summary>
+        /// Increments the port to look at when analysing ports
+        /// </summary>
+        /// <returns>The current port name as a string, or "No Ports" if there are none</returns>
         public string incrementPort()
         {
             portNumberIndex++;
@@ -130,6 +170,9 @@ namespace QEV1_Windows_Updated
             
         }
 
+        /// <summary>
+        /// Reads and analyses an incoming stream of bytes
+        /// </summary>
         public void processIncomingBytestream()
         {
             byte tempByte;
@@ -203,7 +246,23 @@ namespace QEV1_Windows_Updated
             
         }
 
-        public void sendDataToSerial(byte putVal, ushort addr_chunk, long data_chunk)
+        public void setAddressChunk(ushort value)
+        {
+            addr_chunk = value;
+        }
+
+        public void setDataChunk(long value)
+        {
+            data_chunk = value;
+        }
+
+        /// <summary>
+        /// Send data to the serial port
+        /// </summary>
+        /// <param name="putVal">Value to put into buffer 1</param>
+        /// <param name="addr_chunk">Address section value</param>
+        /// <param name="data_chunk">Data section value</param>
+        public void sendDataToSerial(byte putVal)
         {
             // Initialise the buffer to send to the serial port
             byte[] tempBuffer = new byte[10];
@@ -226,6 +285,68 @@ namespace QEV1_Windows_Updated
 
             // Write the data to the serial port
             qevSerialPort.Write(tempBuffer, 0, 10);
+
+            // Sleep for a moment
+            Thread.Sleep(10);
+        }
+
+        /// <summary>
+        /// Inform the program whether the ECU is connected or not, and turn the data timer on/off accordingly
+        /// </summary>
+        /// <param name="isConnected">Value to set ECU connection status</param>
+        public void connectECU(bool isConnected)
+        {
+            ECUconnected = isConnected;
+            qevDataTimer.Enabled = isConnected;
+        }
+
+        /// <summary>
+        /// Determine whether the ECU is connected or not
+        /// </summary>
+        /// <returns>True if ECU is connected, false otherwise</returns>
+        public bool isECUConnected()
+        {
+            return ECUconnected;
+        }
+
+        /// <summary>
+        /// Connect/Disconnect ECU
+        /// </summary>
+        /// <param name="request">Value to determine whether the ECU is connecting or disconnecting</param>
+        /// <param name="portText">Name to assign to port</param>
+        /// <returns>Status code depending on whether ports existed, and on connect/disconnect request</returns>
+        public int connectSerial(int request, string portText)
+        {
+            if (qevSerial.PortsExist())
+            {
+                if (request == CONNECT)
+                {
+                    qevSerialPort.PortName = portText;
+                    qevSerialPort.Open();
+
+                    qevDataTimer.Interval = 50;
+                    qevDataTimer.Enabled = true;
+                    connectECU(true);
+                    Thread.Sleep(500);
+                    return (int)connectSerialCodes.connectPorts;
+                }
+
+                else
+                {
+                    connectECU(false);
+                    qevDataTimer.Enabled = false;
+                    qevSerialPort.Close();
+                    return (int)connectSerialCodes.connectNoPorts;
+                }
+            }
+
+            else
+            {
+                connectECU(false);
+                qevDataTimer.Enabled = false;
+                qevSerialPort.Close();
+                return (int)connectSerialCodes.disconnect;
+            }
         }
 
 

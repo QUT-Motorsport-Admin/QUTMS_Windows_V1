@@ -21,20 +21,16 @@ namespace QEV1_Windows_Updated
     {
         //vars
         Serial serial;
-        //string[] portList;
 
         const int CONNECT = 128;
         const int DISCONNECT = 1;
-        bool ECUconnected = false;
-        //int portNumberIndex = 0;
-
-        //int portNumberMax;
+        
         bool errorsEnabled = true;
         bool errorsDisabled = false;
 
-        ushort addr_chunk = 0;
-        long data_chunk = 0;
-        //int responseHeader = 0;
+        //ushort addr_chunk = 0;
+        //long data_chunk = 0;
+        
         byte[] incomingString = new byte[60];
         int stringIndex = 0;
         ushort stringMode = 0;
@@ -58,36 +54,29 @@ namespace QEV1_Windows_Updated
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO Move anything serial to the SerialCommunication class, so that it 
-            // is completely abstracted from the GUI
-            //serial = new Serial();
-            //scanSerials(errorsDisabled);
-            qevSerialCom = new SerialCommunication(serialPort1);
-
-
-
+            qevSerialCom = new SerialCommunication(serialPort1, getDataTimer);
         }
 
         private void statusCOMnumber_Click(object sender, EventArgs e)
         {
-            // TODO Move anything serial to the SerialCommunication class, so that it 
-            // is completely abstracted from the GUI
             statusCOMnumber.Text = qevSerialCom.incrementPort();
         }
 
         private void statusConnectionStatus_Click(object sender, EventArgs e)
         {
-            // TODO Move anything serial to the SerialCommunication class, so that it 
-            // is completely abstracted from the GUI
-            if (ECUconnected) connectSerial(DISCONNECT);
-            else connectSerial(CONNECT);
+            if (qevSerialCom.isECUConnected())
+            {
+                qevSerialCom.connectSerial(DISCONNECT, statusCOMnumber.Text);
+            }
+
+            else
+            {
+                qevSerialCom.connectSerial(CONNECT, statusCOMnumber.Text);
+            }
         }
 
         private void scanSerials(bool errorMode)
         {
-
-            // TODO Move anything serial to the SerialCommunication class, so that it 
-            // is completely abstracted from the GUI
 
             if (qevSerialCom.scanSerials(errorMode))
             {
@@ -95,12 +84,9 @@ namespace QEV1_Windows_Updated
                 qevSerialCom.resetPort();
 
                 // Update GUI to show number of ports
-                //statusCOMnumber.Text = serial.getPort(serial.PortNumberMax);
                 statusCOMnumber.Text = qevSerialCom.getNumberofPorts();
 
                 // Set SerialPort properties
-                //serialPort1.ReadTimeout = 10000;
-                //serialPort1.BaudRate = 19200;
                 qevSerialCom.setTimeoutAndBaud(10000, 19200);
             }
 
@@ -109,12 +95,10 @@ namespace QEV1_Windows_Updated
                 // Update GUI to show no ports
                 statusConnectionStatus.Text = "No Ports";
                 statusConnectionStatus.BackColor = Color.Yellow;
-                
-                // UP TO HERE (Shane 20/09)
-                ECUconnected = false;
-                connectSerial(DISCONNECT);
-                getDataTimer.Enabled = false;
 
+                qevSerialCom.connectECU(false);
+                connectSerial(DISCONNECT);
+                
                 if (errorMode)
                 {
                     MessageBox.Show("No Ports Found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -125,89 +109,57 @@ namespace QEV1_Windows_Updated
 
         private void connectSerial(int request)
         {
-            // TODO Move anything to the SerialCommunication class, so that it 
-            // is completely abstracted from the GUI
             try
             {
-                if (serial.PortsExist())
-                {
-                    if (request == CONNECT)
-                    {
-                        // If there are ports and we want to connect, open the port
-                        serialPort1.PortName = statusCOMnumber.Text;
-                        serialPort1.Open();
-
-                        // Update GUI
+                int connectResponse = qevSerialCom.connectSerial(request, statusCOMnumber.Text);
+                switch (connectResponse) {
+                    case (int)SerialCommunication.connectSerialCodes.connectPorts:
                         statusConnectionStatus.Text = "Connected";
                         statusConnectionStatus.BackColor = System.Drawing.Color.DarkSeaGreen;
-
-                        ECUconnected = true;
-
-                        // Update timer settings
-                        getDataTimer.Interval = 50; // normally 50
-                        getDataTimer.Enabled = true;
-                        Thread.Sleep(500);
-                    }
-
-                    else
-                    {
-                        // If there are ports and we don't want to connect, close the port
-                        ECUconnected = false;
-                        getDataTimer.Enabled = false;
-                        serialPort1.Close();
+                        break;
+                    case (int)SerialCommunication.connectSerialCodes.connectNoPorts:
                         statusConnectionStatus.Text = "Disconnected";
                         statusConnectionStatus.BackColor = System.Drawing.Color.IndianRed;
-                    }
+                        break;
+                    case (int)SerialCommunication.connectSerialCodes.disconnect:
+                        MessageBox.Show("No Ports Available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        statusConnectionStatus.Text = "No Ports";
+                        break;
+                    default: throw new Exception();
                 }
-
-                else if (request == CONNECT)
-                {
-                    // If there are no ports, display an error
-                    MessageBox.Show("No Ports Available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    statusConnectionStatus.Text = "No Ports";
-                }
-
             }
 
             catch
             {
                 MessageBox.Show("Port Error", "OS Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //statusConnectionStatus.Text = "Port Fault";
+                statusConnectionStatus.Text = "Port Fault";
                 statusConnectionStatus.BackColor = Color.Red;
-                ECUconnected = false;
-                connectSerial(DISCONNECT);
-                getDataTimer.Enabled = false;
+                qevSerialCom.connectSerial(DISCONNECT, null);
             }
         }
 
         private void getDataTimer_Tick(object sender, EventArgs e)
         {
             try
-            {                
-                SerialCommunication serialcomm = new SerialCommunication(serialPort1);
-                
-                if (mainScreenTabControl.SelectedTab == Accumulators_Tab) serialcomm.sendDataToSerial(2, addr_chunk, data_chunk);            //packet type 2
-                else if (mainScreenTabControl.SelectedTab == Inverters_Tab) serialcomm.sendDataToSerial(3, addr_chunk, data_chunk);          //packet type 3
-                else if (mainScreenTabControl.SelectedTab == TorqueVectoring_Tab) serialcomm.sendDataToSerial(4, addr_chunk, data_chunk);    //packet type 4
-                else if (mainScreenTabControl.SelectedTab == GLV_Tab) serialcomm.sendDataToSerial(5, addr_chunk, data_chunk);                //packet type 5
-                else if (mainScreenTabControl.SelectedTab == Cooling_Tab) serialcomm.sendDataToSerial(6, addr_chunk, data_chunk);            //packet type 6
-                else if (mainScreenTabControl.SelectedTab == Safety_Tab) serialcomm.sendDataToSerial(7, addr_chunk, data_chunk);             //packet type 7
-                else if (mainScreenTabControl.SelectedTab == Safety_Tab) serialcomm.sendDataToSerial(8, addr_chunk, data_chunk);             //packet type 8
-                else if (mainScreenTabControl.SelectedTab == Diagnostics_Tab) serialcomm.sendDataToSerial(9, addr_chunk, data_chunk);        //packet type 9
-                else serialcomm.sendDataToSerial(1, addr_chunk, data_chunk);
-
-                addr_chunk = 0;
-                data_chunk = 0;
-
-                Thread.Sleep(10);
+            {                                
+                if (mainScreenTabControl.SelectedTab == Accumulators_Tab) qevSerialCom.sendDataToSerial(2);            //packet type 2
+                else if (mainScreenTabControl.SelectedTab == Inverters_Tab) qevSerialCom.sendDataToSerial(3);          //packet type 3
+                else if (mainScreenTabControl.SelectedTab == TorqueVectoring_Tab) qevSerialCom.sendDataToSerial(4);    //packet type 4
+                else if (mainScreenTabControl.SelectedTab == GLV_Tab) qevSerialCom.sendDataToSerial(5);                //packet type 5
+                else if (mainScreenTabControl.SelectedTab == Cooling_Tab) qevSerialCom.sendDataToSerial(6);            //packet type 6
+                else if (mainScreenTabControl.SelectedTab == Safety_Tab) qevSerialCom.sendDataToSerial(7);             //packet type 7
+                else if (mainScreenTabControl.SelectedTab == Safety_Tab) qevSerialCom.sendDataToSerial(8);             //packet type 8
+                else if (mainScreenTabControl.SelectedTab == Diagnostics_Tab) qevSerialCom.sendDataToSerial(9);        //packet type 9
+                else qevSerialCom.sendDataToSerial(1);
+                                
+                //Thread.Sleep(10);
             }
 
             catch
             {
+                qevSerialCom.connectECU(false);
+                qevSerialCom.connectSerial(DISCONNECT, null);
                 statusConnectionStatus.BackColor = Color.Red;
-                ECUconnected = false;
-                connectSerial(DISCONNECT);
-                getDataTimer.Enabled = false;
                 MessageBox.Show("Serial Port Access Error", "Comms Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -305,15 +257,15 @@ namespace QEV1_Windows_Updated
         {
             if (balancingLabel.Text == "Balancing Off")
             {
-                addr_chunk = 200;
-                data_chunk = 1;
+                qevSerialCom.setAddressChunk(200);
+                qevSerialCom.setDataChunk(1);
                 balancingLabel.Text = "Balancing On";
             }
 
             else
             {
-                addr_chunk = 200;
-                data_chunk = 0;
+                qevSerialCom.setAddressChunk(200);
+                qevSerialCom.setDataChunk(200);
                 balancingLabel.Text = "Balancing Off";
             }
         }
