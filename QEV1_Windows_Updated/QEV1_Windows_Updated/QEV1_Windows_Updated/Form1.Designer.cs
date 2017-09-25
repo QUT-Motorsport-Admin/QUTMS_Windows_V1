@@ -89,6 +89,10 @@
             this.dataColumn2 = new System.Data.DataColumn();
             this.GLV_Tab = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.PMnameBox4 = new System.Windows.Forms.TextBox();
+            this.PMnameBox3 = new System.Windows.Forms.TextBox();
+            this.PMnameBox2 = new System.Windows.Forms.TextBox();
+            this.PMtypeLabel2 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -96,7 +100,67 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PMnameBox1 = new System.Windows.Forms.TextBox();
+            this.PMchannelLabel1 = new System.Windows.Forms.Label();
+            this.PMchannelLabel2 = new System.Windows.Forms.Label();
+            this.PMchannelLabel3 = new System.Windows.Forms.Label();
+            this.PMchannelLabel4 = new System.Windows.Forms.Label();
+            this.PMchannelLabel5 = new System.Windows.Forms.Label();
+            this.PMchannelLabel6 = new System.Windows.Forms.Label();
+            this.PMchannelLabel7 = new System.Windows.Forms.Label();
+            this.PMchannelLabel8 = new System.Windows.Forms.Label();
+            this.PMchannelLabel9 = new System.Windows.Forms.Label();
+            this.PMchannelLabel10 = new System.Windows.Forms.Label();
+            this.PMchannelLabel11 = new System.Windows.Forms.Label();
+            this.PMchannelLabel12 = new System.Windows.Forms.Label();
+            this.PMchannelLabel13 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel1 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel2 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel3 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel4 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel5 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel6 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel7 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel8 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel9 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel10 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel11 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel12 = new System.Windows.Forms.Label();
+            this.PMcurrentDrawLabel13 = new System.Windows.Forms.Label();
+            this.PMstatusLabel1 = new System.Windows.Forms.Label();
+            this.PMstatusLabel2 = new System.Windows.Forms.Label();
+            this.PMstatusLabel3 = new System.Windows.Forms.Label();
+            this.PMstatusLabel4 = new System.Windows.Forms.Label();
+            this.PMstatusLabel5 = new System.Windows.Forms.Label();
+            this.PMstatusLabel6 = new System.Windows.Forms.Label();
+            this.PMstatusLabel7 = new System.Windows.Forms.Label();
+            this.PMstatusLabel8 = new System.Windows.Forms.Label();
+            this.PMstatusLabel9 = new System.Windows.Forms.Label();
+            this.PMstatusLabel10 = new System.Windows.Forms.Label();
+            this.PMstatusLabel11 = new System.Windows.Forms.Label();
+            this.PMstatusLabel12 = new System.Windows.Forms.Label();
+            this.PMstatusLabel13 = new System.Windows.Forms.Label();
+            this.PMtypeLabel1 = new System.Windows.Forms.Label();
+            this.PMtypeLabel4 = new System.Windows.Forms.Label();
+            this.PMtypeLabel3 = new System.Windows.Forms.Label();
+            this.PMtypeLabel5 = new System.Windows.Forms.Label();
+            this.PMtypeLabel6 = new System.Windows.Forms.Label();
+            this.PMtypeLabel7 = new System.Windows.Forms.Label();
+            this.PMtypeLabel8 = new System.Windows.Forms.Label();
+            this.PMtypeLabel9 = new System.Windows.Forms.Label();
+            this.PMtypeLabel10 = new System.Windows.Forms.Label();
+            this.PMtypeLabel11 = new System.Windows.Forms.Label();
+            this.PMtypeLabel12 = new System.Windows.Forms.Label();
+            this.PMtypeLabel13 = new System.Windows.Forms.Label();
+            this.PMnameBox5 = new System.Windows.Forms.TextBox();
+            this.PMnameBox6 = new System.Windows.Forms.TextBox();
+            this.PMnameBox7 = new System.Windows.Forms.TextBox();
+            this.PMnameBox8 = new System.Windows.Forms.TextBox();
+            this.PMnameBox9 = new System.Windows.Forms.TextBox();
+            this.PMnameBox10 = new System.Windows.Forms.TextBox();
+            this.PMnameBox11 = new System.Windows.Forms.TextBox();
+            this.PMnameBox12 = new System.Windows.Forms.TextBox();
+            this.PMnameBox13 = new System.Windows.Forms.TextBox();
             this.Cooling_Tab = new System.Windows.Forms.TabPage();
             this.Safety_Tab = new System.Windows.Forms.TabPage();
             this.IOsetup_Tab = new System.Windows.Forms.TabPage();
@@ -128,7 +192,6 @@
             this.disconnectSerialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkToTelemetryServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serialTimer = new System.Windows.Forms.Timer(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.statusStrip1.SuspendLayout();
             this.mainScreenTabControl.SuspendLayout();
             this.Overview_Tab.SuspendLayout();
@@ -791,14 +854,17 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.71762F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.28238F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 291F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 225F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.12844F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.87156F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 209F));
-            this.tableLayoutPanel1.Controls.Add(this.comboBox1, 2, 1);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 473F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox4, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox3, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel2, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.label28, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.label27, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label26, 4, 0);
@@ -806,20 +872,129 @@
             this.tableLayoutPanel1.Controls.Add(this.label8, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(87, 70);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel3, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel4, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel5, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel6, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel7, 0, 7);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel8, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel9, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel10, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel11, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel12, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.PMchannelLabel13, 0, 13);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel1, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel2, 6, 2);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel3, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel4, 6, 4);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel5, 6, 5);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel6, 6, 6);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel7, 6, 7);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel8, 6, 8);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel9, 6, 9);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel10, 6, 10);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel11, 6, 11);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel12, 6, 12);
+            this.tableLayoutPanel1.Controls.Add(this.PMcurrentDrawLabel13, 6, 13);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel1, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel2, 5, 2);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel3, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel4, 5, 4);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel5, 5, 5);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel6, 5, 6);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel7, 5, 7);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel8, 5, 8);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel9, 5, 9);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel10, 5, 10);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel11, 5, 11);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel12, 5, 12);
+            this.tableLayoutPanel1.Controls.Add(this.PMstatusLabel13, 5, 13);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel4, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel3, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel5, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel6, 2, 6);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel7, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel8, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel9, 2, 9);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel10, 2, 10);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel11, 2, 11);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel12, 2, 12);
+            this.tableLayoutPanel1.Controls.Add(this.PMtypeLabel13, 2, 13);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox5, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox6, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox7, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox8, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox9, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox10, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox11, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox12, 1, 12);
+            this.tableLayoutPanel1.Controls.Add(this.PMnameBox13, 1, 13);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 8);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1582, 657);
+            this.tableLayoutPanel1.RowCount = 14;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1989, 982);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // PMnameBox4
+            // 
+            this.PMnameBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox4.Location = new System.Drawing.Point(141, 307);
+            this.PMnameBox4.MaxLength = 16;
+            this.PMnameBox4.Name = "PMnameBox4";
+            this.PMnameBox4.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox4.TabIndex = 68;
+            // 
+            // PMnameBox3
+            // 
+            this.PMnameBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox3.Location = new System.Drawing.Point(141, 239);
+            this.PMnameBox3.MaxLength = 16;
+            this.PMnameBox3.Name = "PMnameBox3";
+            this.PMnameBox3.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox3.TabIndex = 65;
+            // 
+            // PMnameBox2
+            // 
+            this.PMnameBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox2.Location = new System.Drawing.Point(141, 171);
+            this.PMnameBox2.MaxLength = 16;
+            this.PMnameBox2.Name = "PMnameBox2";
+            this.PMnameBox2.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox2.TabIndex = 62;
+            // 
+            // PMtypeLabel2
+            // 
+            this.PMtypeLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel2.AutoSize = true;
+            this.PMtypeLabel2.Location = new System.Drawing.Point(437, 175);
+            this.PMtypeLabel2.Name = "PMtypeLabel2";
+            this.PMtypeLabel2.Size = new System.Drawing.Size(138, 29);
+            this.PMtypeLabel2.TabIndex = 51;
+            this.PMtypeLabel2.Text = "High Current";
             // 
             // label28
             // 
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(1404, 149);
+            this.label28.Location = new System.Drawing.Point(1810, 29);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(145, 29);
             this.label28.TabIndex = 6;
@@ -829,7 +1004,7 @@
             // 
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(1240, 149);
+            this.label27.Location = new System.Drawing.Point(1644, 29);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(74, 29);
             this.label27.TabIndex = 5;
@@ -839,7 +1014,7 @@
             // 
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(1037, 149);
+            this.label26.Location = new System.Drawing.Point(1297, 29);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(66, 29);
             this.label26.TabIndex = 4;
@@ -849,7 +1024,7 @@
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(794, 149);
+            this.label23.Location = new System.Drawing.Point(772, 29);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(131, 29);
             this.label23.TabIndex = 3;
@@ -859,7 +1034,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(585, 149);
+            this.label8.Location = new System.Drawing.Point(476, 29);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 29);
             this.label8.TabIndex = 2;
@@ -869,7 +1044,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(252, 149);
+            this.label5.Location = new System.Drawing.Point(230, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 29);
             this.label5.TabIndex = 1;
@@ -879,20 +1054,620 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 149);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(12, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Channel";
             // 
-            // textBox1
+            // PMnameBox1
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(130, 474);
-            this.textBox1.MaxLength = 16;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(316, 37);
-            this.textBox1.TabIndex = 7;
+            this.PMnameBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox1.Location = new System.Drawing.Point(141, 103);
+            this.PMnameBox1.MaxLength = 16;
+            this.PMnameBox1.Name = "PMnameBox1";
+            this.PMnameBox1.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox1.TabIndex = 7;
+            // 
+            // PMchannelLabel1
+            // 
+            this.PMchannelLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel1.AutoSize = true;
+            this.PMchannelLabel1.Location = new System.Drawing.Point(47, 107);
+            this.PMchannelLabel1.Name = "PMchannelLabel1";
+            this.PMchannelLabel1.Size = new System.Drawing.Size(25, 29);
+            this.PMchannelLabel1.TabIndex = 8;
+            this.PMchannelLabel1.Text = "1";
+            // 
+            // PMchannelLabel2
+            // 
+            this.PMchannelLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel2.AutoSize = true;
+            this.PMchannelLabel2.Location = new System.Drawing.Point(47, 175);
+            this.PMchannelLabel2.Name = "PMchannelLabel2";
+            this.PMchannelLabel2.Size = new System.Drawing.Size(25, 29);
+            this.PMchannelLabel2.TabIndex = 9;
+            this.PMchannelLabel2.Text = "2";
+            // 
+            // PMchannelLabel3
+            // 
+            this.PMchannelLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel3.AutoSize = true;
+            this.PMchannelLabel3.Location = new System.Drawing.Point(47, 243);
+            this.PMchannelLabel3.Name = "PMchannelLabel3";
+            this.PMchannelLabel3.Size = new System.Drawing.Size(25, 29);
+            this.PMchannelLabel3.TabIndex = 10;
+            this.PMchannelLabel3.Text = "3";
+            // 
+            // PMchannelLabel4
+            // 
+            this.PMchannelLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel4.AutoSize = true;
+            this.PMchannelLabel4.Location = new System.Drawing.Point(47, 311);
+            this.PMchannelLabel4.Name = "PMchannelLabel4";
+            this.PMchannelLabel4.Size = new System.Drawing.Size(25, 29);
+            this.PMchannelLabel4.TabIndex = 11;
+            this.PMchannelLabel4.Text = "4";
+            // 
+            // PMchannelLabel5
+            // 
+            this.PMchannelLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel5.AutoSize = true;
+            this.PMchannelLabel5.Location = new System.Drawing.Point(47, 379);
+            this.PMchannelLabel5.Name = "PMchannelLabel5";
+            this.PMchannelLabel5.Size = new System.Drawing.Size(25, 29);
+            this.PMchannelLabel5.TabIndex = 12;
+            this.PMchannelLabel5.Text = "5";
+            // 
+            // PMchannelLabel6
+            // 
+            this.PMchannelLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel6.AutoSize = true;
+            this.PMchannelLabel6.Location = new System.Drawing.Point(47, 447);
+            this.PMchannelLabel6.Name = "PMchannelLabel6";
+            this.PMchannelLabel6.Size = new System.Drawing.Size(25, 29);
+            this.PMchannelLabel6.TabIndex = 13;
+            this.PMchannelLabel6.Text = "6";
+            // 
+            // PMchannelLabel7
+            // 
+            this.PMchannelLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel7.AutoSize = true;
+            this.PMchannelLabel7.Location = new System.Drawing.Point(47, 515);
+            this.PMchannelLabel7.Name = "PMchannelLabel7";
+            this.PMchannelLabel7.Size = new System.Drawing.Size(25, 29);
+            this.PMchannelLabel7.TabIndex = 14;
+            this.PMchannelLabel7.Text = "7";
+            // 
+            // PMchannelLabel8
+            // 
+            this.PMchannelLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel8.AutoSize = true;
+            this.PMchannelLabel8.Location = new System.Drawing.Point(47, 583);
+            this.PMchannelLabel8.Name = "PMchannelLabel8";
+            this.PMchannelLabel8.Size = new System.Drawing.Size(25, 29);
+            this.PMchannelLabel8.TabIndex = 15;
+            this.PMchannelLabel8.Text = "8";
+            // 
+            // PMchannelLabel9
+            // 
+            this.PMchannelLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel9.AutoSize = true;
+            this.PMchannelLabel9.Location = new System.Drawing.Point(47, 651);
+            this.PMchannelLabel9.Name = "PMchannelLabel9";
+            this.PMchannelLabel9.Size = new System.Drawing.Size(25, 29);
+            this.PMchannelLabel9.TabIndex = 16;
+            this.PMchannelLabel9.Text = "9";
+            // 
+            // PMchannelLabel10
+            // 
+            this.PMchannelLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel10.AutoSize = true;
+            this.PMchannelLabel10.Location = new System.Drawing.Point(41, 719);
+            this.PMchannelLabel10.Name = "PMchannelLabel10";
+            this.PMchannelLabel10.Size = new System.Drawing.Size(37, 29);
+            this.PMchannelLabel10.TabIndex = 17;
+            this.PMchannelLabel10.Text = "10";
+            // 
+            // PMchannelLabel11
+            // 
+            this.PMchannelLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel11.AutoSize = true;
+            this.PMchannelLabel11.Location = new System.Drawing.Point(41, 787);
+            this.PMchannelLabel11.Name = "PMchannelLabel11";
+            this.PMchannelLabel11.Size = new System.Drawing.Size(37, 29);
+            this.PMchannelLabel11.TabIndex = 18;
+            this.PMchannelLabel11.Text = "11";
+            // 
+            // PMchannelLabel12
+            // 
+            this.PMchannelLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel12.AutoSize = true;
+            this.PMchannelLabel12.Location = new System.Drawing.Point(41, 855);
+            this.PMchannelLabel12.Name = "PMchannelLabel12";
+            this.PMchannelLabel12.Size = new System.Drawing.Size(37, 29);
+            this.PMchannelLabel12.TabIndex = 19;
+            this.PMchannelLabel12.Text = "12";
+            // 
+            // PMchannelLabel13
+            // 
+            this.PMchannelLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMchannelLabel13.AutoSize = true;
+            this.PMchannelLabel13.Location = new System.Drawing.Point(41, 928);
+            this.PMchannelLabel13.Name = "PMchannelLabel13";
+            this.PMchannelLabel13.Size = new System.Drawing.Size(37, 29);
+            this.PMchannelLabel13.TabIndex = 20;
+            this.PMchannelLabel13.Text = "13";
+            // 
+            // PMcurrentDrawLabel1
+            // 
+            this.PMcurrentDrawLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel1.AutoSize = true;
+            this.PMcurrentDrawLabel1.Location = new System.Drawing.Point(1831, 107);
+            this.PMcurrentDrawLabel1.Name = "PMcurrentDrawLabel1";
+            this.PMcurrentDrawLabel1.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel1.TabIndex = 21;
+            this.PMcurrentDrawLabel1.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel2
+            // 
+            this.PMcurrentDrawLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel2.AutoSize = true;
+            this.PMcurrentDrawLabel2.Location = new System.Drawing.Point(1831, 175);
+            this.PMcurrentDrawLabel2.Name = "PMcurrentDrawLabel2";
+            this.PMcurrentDrawLabel2.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel2.TabIndex = 22;
+            this.PMcurrentDrawLabel2.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel3
+            // 
+            this.PMcurrentDrawLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel3.AutoSize = true;
+            this.PMcurrentDrawLabel3.Location = new System.Drawing.Point(1831, 243);
+            this.PMcurrentDrawLabel3.Name = "PMcurrentDrawLabel3";
+            this.PMcurrentDrawLabel3.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel3.TabIndex = 23;
+            this.PMcurrentDrawLabel3.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel4
+            // 
+            this.PMcurrentDrawLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel4.AutoSize = true;
+            this.PMcurrentDrawLabel4.Location = new System.Drawing.Point(1831, 311);
+            this.PMcurrentDrawLabel4.Name = "PMcurrentDrawLabel4";
+            this.PMcurrentDrawLabel4.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel4.TabIndex = 24;
+            this.PMcurrentDrawLabel4.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel5
+            // 
+            this.PMcurrentDrawLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel5.AutoSize = true;
+            this.PMcurrentDrawLabel5.Location = new System.Drawing.Point(1831, 379);
+            this.PMcurrentDrawLabel5.Name = "PMcurrentDrawLabel5";
+            this.PMcurrentDrawLabel5.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel5.TabIndex = 25;
+            this.PMcurrentDrawLabel5.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel6
+            // 
+            this.PMcurrentDrawLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel6.AutoSize = true;
+            this.PMcurrentDrawLabel6.Location = new System.Drawing.Point(1831, 447);
+            this.PMcurrentDrawLabel6.Name = "PMcurrentDrawLabel6";
+            this.PMcurrentDrawLabel6.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel6.TabIndex = 26;
+            this.PMcurrentDrawLabel6.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel7
+            // 
+            this.PMcurrentDrawLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel7.AutoSize = true;
+            this.PMcurrentDrawLabel7.Location = new System.Drawing.Point(1831, 515);
+            this.PMcurrentDrawLabel7.Name = "PMcurrentDrawLabel7";
+            this.PMcurrentDrawLabel7.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel7.TabIndex = 27;
+            this.PMcurrentDrawLabel7.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel8
+            // 
+            this.PMcurrentDrawLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel8.AutoSize = true;
+            this.PMcurrentDrawLabel8.Location = new System.Drawing.Point(1831, 583);
+            this.PMcurrentDrawLabel8.Name = "PMcurrentDrawLabel8";
+            this.PMcurrentDrawLabel8.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel8.TabIndex = 28;
+            this.PMcurrentDrawLabel8.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel9
+            // 
+            this.PMcurrentDrawLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel9.AutoSize = true;
+            this.PMcurrentDrawLabel9.Location = new System.Drawing.Point(1831, 651);
+            this.PMcurrentDrawLabel9.Name = "PMcurrentDrawLabel9";
+            this.PMcurrentDrawLabel9.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel9.TabIndex = 29;
+            this.PMcurrentDrawLabel9.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel10
+            // 
+            this.PMcurrentDrawLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel10.AutoSize = true;
+            this.PMcurrentDrawLabel10.Location = new System.Drawing.Point(1831, 719);
+            this.PMcurrentDrawLabel10.Name = "PMcurrentDrawLabel10";
+            this.PMcurrentDrawLabel10.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel10.TabIndex = 30;
+            this.PMcurrentDrawLabel10.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel11
+            // 
+            this.PMcurrentDrawLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel11.AutoSize = true;
+            this.PMcurrentDrawLabel11.Location = new System.Drawing.Point(1831, 787);
+            this.PMcurrentDrawLabel11.Name = "PMcurrentDrawLabel11";
+            this.PMcurrentDrawLabel11.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel11.TabIndex = 31;
+            this.PMcurrentDrawLabel11.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel12
+            // 
+            this.PMcurrentDrawLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel12.AutoSize = true;
+            this.PMcurrentDrawLabel12.Location = new System.Drawing.Point(1831, 855);
+            this.PMcurrentDrawLabel12.Name = "PMcurrentDrawLabel12";
+            this.PMcurrentDrawLabel12.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel12.TabIndex = 32;
+            this.PMcurrentDrawLabel12.Text = "0.0 Amps";
+            // 
+            // PMcurrentDrawLabel13
+            // 
+            this.PMcurrentDrawLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel13.AutoSize = true;
+            this.PMcurrentDrawLabel13.Location = new System.Drawing.Point(1831, 928);
+            this.PMcurrentDrawLabel13.Name = "PMcurrentDrawLabel13";
+            this.PMcurrentDrawLabel13.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel13.TabIndex = 33;
+            this.PMcurrentDrawLabel13.Text = "0.0 Amps";
+            // 
+            // PMstatusLabel1
+            // 
+            this.PMstatusLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel1.AutoSize = true;
+            this.PMstatusLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.PMstatusLabel1.ForeColor = System.Drawing.Color.Green;
+            this.PMstatusLabel1.Location = new System.Drawing.Point(1659, 107);
+            this.PMstatusLabel1.Name = "PMstatusLabel1";
+            this.PMstatusLabel1.Size = new System.Drawing.Size(45, 29);
+            this.PMstatusLabel1.TabIndex = 34;
+            this.PMstatusLabel1.Text = "ON";
+            // 
+            // PMstatusLabel2
+            // 
+            this.PMstatusLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel2.AutoSize = true;
+            this.PMstatusLabel2.Location = new System.Drawing.Point(1656, 175);
+            this.PMstatusLabel2.Name = "PMstatusLabel2";
+            this.PMstatusLabel2.Size = new System.Drawing.Size(51, 29);
+            this.PMstatusLabel2.TabIndex = 35;
+            this.PMstatusLabel2.Text = "OFF";
+            // 
+            // PMstatusLabel3
+            // 
+            this.PMstatusLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel3.AutoSize = true;
+            this.PMstatusLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.PMstatusLabel3.ForeColor = System.Drawing.Color.DimGray;
+            this.PMstatusLabel3.Location = new System.Drawing.Point(1627, 243);
+            this.PMstatusLabel3.Name = "PMstatusLabel3";
+            this.PMstatusLabel3.Size = new System.Drawing.Size(109, 29);
+            this.PMstatusLabel3.TabIndex = 36;
+            this.PMstatusLabel3.Text = "DISABLED";
+            // 
+            // PMstatusLabel4
+            // 
+            this.PMstatusLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel4.AutoSize = true;
+            this.PMstatusLabel4.BackColor = System.Drawing.Color.Red;
+            this.PMstatusLabel4.ForeColor = System.Drawing.Color.White;
+            this.PMstatusLabel4.Location = new System.Drawing.Point(1653, 311);
+            this.PMstatusLabel4.Name = "PMstatusLabel4";
+            this.PMstatusLabel4.Size = new System.Drawing.Size(56, 29);
+            this.PMstatusLabel4.TabIndex = 37;
+            this.PMstatusLabel4.Text = "TRIP";
+            // 
+            // PMstatusLabel5
+            // 
+            this.PMstatusLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel5.AutoSize = true;
+            this.PMstatusLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.PMstatusLabel5.ForeColor = System.Drawing.Color.Red;
+            this.PMstatusLabel5.Location = new System.Drawing.Point(1645, 379);
+            this.PMstatusLabel5.Name = "PMstatusLabel5";
+            this.PMstatusLabel5.Size = new System.Drawing.Size(72, 29);
+            this.PMstatusLabel5.TabIndex = 38;
+            this.PMstatusLabel5.Text = "FAULT";
+            // 
+            // PMstatusLabel6
+            // 
+            this.PMstatusLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel6.AutoSize = true;
+            this.PMstatusLabel6.Location = new System.Drawing.Point(1656, 447);
+            this.PMstatusLabel6.Name = "PMstatusLabel6";
+            this.PMstatusLabel6.Size = new System.Drawing.Size(51, 29);
+            this.PMstatusLabel6.TabIndex = 39;
+            this.PMstatusLabel6.Text = "OFF";
+            // 
+            // PMstatusLabel7
+            // 
+            this.PMstatusLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel7.AutoSize = true;
+            this.PMstatusLabel7.Location = new System.Drawing.Point(1656, 515);
+            this.PMstatusLabel7.Name = "PMstatusLabel7";
+            this.PMstatusLabel7.Size = new System.Drawing.Size(51, 29);
+            this.PMstatusLabel7.TabIndex = 40;
+            this.PMstatusLabel7.Text = "OFF";
+            // 
+            // PMstatusLabel8
+            // 
+            this.PMstatusLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel8.AutoSize = true;
+            this.PMstatusLabel8.Location = new System.Drawing.Point(1656, 583);
+            this.PMstatusLabel8.Name = "PMstatusLabel8";
+            this.PMstatusLabel8.Size = new System.Drawing.Size(51, 29);
+            this.PMstatusLabel8.TabIndex = 41;
+            this.PMstatusLabel8.Text = "OFF";
+            // 
+            // PMstatusLabel9
+            // 
+            this.PMstatusLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel9.AutoSize = true;
+            this.PMstatusLabel9.Location = new System.Drawing.Point(1656, 651);
+            this.PMstatusLabel9.Name = "PMstatusLabel9";
+            this.PMstatusLabel9.Size = new System.Drawing.Size(51, 29);
+            this.PMstatusLabel9.TabIndex = 42;
+            this.PMstatusLabel9.Text = "OFF";
+            // 
+            // PMstatusLabel10
+            // 
+            this.PMstatusLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel10.AutoSize = true;
+            this.PMstatusLabel10.Location = new System.Drawing.Point(1656, 719);
+            this.PMstatusLabel10.Name = "PMstatusLabel10";
+            this.PMstatusLabel10.Size = new System.Drawing.Size(51, 29);
+            this.PMstatusLabel10.TabIndex = 43;
+            this.PMstatusLabel10.Text = "OFF";
+            // 
+            // PMstatusLabel11
+            // 
+            this.PMstatusLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel11.AutoSize = true;
+            this.PMstatusLabel11.Location = new System.Drawing.Point(1656, 787);
+            this.PMstatusLabel11.Name = "PMstatusLabel11";
+            this.PMstatusLabel11.Size = new System.Drawing.Size(51, 29);
+            this.PMstatusLabel11.TabIndex = 44;
+            this.PMstatusLabel11.Text = "OFF";
+            // 
+            // PMstatusLabel12
+            // 
+            this.PMstatusLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel12.AutoSize = true;
+            this.PMstatusLabel12.Location = new System.Drawing.Point(1656, 855);
+            this.PMstatusLabel12.Name = "PMstatusLabel12";
+            this.PMstatusLabel12.Size = new System.Drawing.Size(51, 29);
+            this.PMstatusLabel12.TabIndex = 45;
+            this.PMstatusLabel12.Text = "OFF";
+            // 
+            // PMstatusLabel13
+            // 
+            this.PMstatusLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMstatusLabel13.AutoSize = true;
+            this.PMstatusLabel13.Location = new System.Drawing.Point(1656, 928);
+            this.PMstatusLabel13.Name = "PMstatusLabel13";
+            this.PMstatusLabel13.Size = new System.Drawing.Size(51, 29);
+            this.PMstatusLabel13.TabIndex = 46;
+            this.PMstatusLabel13.Text = "OFF";
+            // 
+            // PMtypeLabel1
+            // 
+            this.PMtypeLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel1.AutoSize = true;
+            this.PMtypeLabel1.Location = new System.Drawing.Point(437, 107);
+            this.PMtypeLabel1.Name = "PMtypeLabel1";
+            this.PMtypeLabel1.Size = new System.Drawing.Size(138, 29);
+            this.PMtypeLabel1.TabIndex = 47;
+            this.PMtypeLabel1.Text = "High Current";
+            // 
+            // PMtypeLabel4
+            // 
+            this.PMtypeLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel4.AutoSize = true;
+            this.PMtypeLabel4.Location = new System.Drawing.Point(437, 311);
+            this.PMtypeLabel4.Name = "PMtypeLabel4";
+            this.PMtypeLabel4.Size = new System.Drawing.Size(138, 29);
+            this.PMtypeLabel4.TabIndex = 54;
+            this.PMtypeLabel4.Text = "High Current";
+            // 
+            // PMtypeLabel3
+            // 
+            this.PMtypeLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel3.AutoSize = true;
+            this.PMtypeLabel3.Location = new System.Drawing.Point(437, 243);
+            this.PMtypeLabel3.Name = "PMtypeLabel3";
+            this.PMtypeLabel3.Size = new System.Drawing.Size(138, 29);
+            this.PMtypeLabel3.TabIndex = 50;
+            this.PMtypeLabel3.Text = "High Current";
+            // 
+            // PMtypeLabel5
+            // 
+            this.PMtypeLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel5.AutoSize = true;
+            this.PMtypeLabel5.Location = new System.Drawing.Point(437, 379);
+            this.PMtypeLabel5.Name = "PMtypeLabel5";
+            this.PMtypeLabel5.Size = new System.Drawing.Size(138, 29);
+            this.PMtypeLabel5.TabIndex = 52;
+            this.PMtypeLabel5.Text = "High Current";
+            // 
+            // PMtypeLabel6
+            // 
+            this.PMtypeLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel6.AutoSize = true;
+            this.PMtypeLabel6.Location = new System.Drawing.Point(437, 447);
+            this.PMtypeLabel6.Name = "PMtypeLabel6";
+            this.PMtypeLabel6.Size = new System.Drawing.Size(138, 29);
+            this.PMtypeLabel6.TabIndex = 53;
+            this.PMtypeLabel6.Text = "High Current";
+            // 
+            // PMtypeLabel7
+            // 
+            this.PMtypeLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel7.AutoSize = true;
+            this.PMtypeLabel7.Location = new System.Drawing.Point(437, 515);
+            this.PMtypeLabel7.Name = "PMtypeLabel7";
+            this.PMtypeLabel7.Size = new System.Drawing.Size(138, 29);
+            this.PMtypeLabel7.TabIndex = 49;
+            this.PMtypeLabel7.Text = "High Current";
+            // 
+            // PMtypeLabel8
+            // 
+            this.PMtypeLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel8.AutoSize = true;
+            this.PMtypeLabel8.Location = new System.Drawing.Point(437, 583);
+            this.PMtypeLabel8.Name = "PMtypeLabel8";
+            this.PMtypeLabel8.Size = new System.Drawing.Size(138, 29);
+            this.PMtypeLabel8.TabIndex = 48;
+            this.PMtypeLabel8.Text = "High Current";
+            // 
+            // PMtypeLabel9
+            // 
+            this.PMtypeLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel9.AutoSize = true;
+            this.PMtypeLabel9.Location = new System.Drawing.Point(437, 651);
+            this.PMtypeLabel9.Name = "PMtypeLabel9";
+            this.PMtypeLabel9.Size = new System.Drawing.Size(138, 29);
+            this.PMtypeLabel9.TabIndex = 55;
+            this.PMtypeLabel9.Text = "High Current";
+            // 
+            // PMtypeLabel10
+            // 
+            this.PMtypeLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel10.AutoSize = true;
+            this.PMtypeLabel10.Location = new System.Drawing.Point(438, 719);
+            this.PMtypeLabel10.Name = "PMtypeLabel10";
+            this.PMtypeLabel10.Size = new System.Drawing.Size(137, 29);
+            this.PMtypeLabel10.TabIndex = 56;
+            this.PMtypeLabel10.Text = "Push/Pull 5A";
+            // 
+            // PMtypeLabel11
+            // 
+            this.PMtypeLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel11.AutoSize = true;
+            this.PMtypeLabel11.Location = new System.Drawing.Point(438, 787);
+            this.PMtypeLabel11.Name = "PMtypeLabel11";
+            this.PMtypeLabel11.Size = new System.Drawing.Size(137, 29);
+            this.PMtypeLabel11.TabIndex = 57;
+            this.PMtypeLabel11.Text = "Push/Pull 5A";
+            // 
+            // PMtypeLabel12
+            // 
+            this.PMtypeLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel12.AutoSize = true;
+            this.PMtypeLabel12.Location = new System.Drawing.Point(438, 855);
+            this.PMtypeLabel12.Name = "PMtypeLabel12";
+            this.PMtypeLabel12.Size = new System.Drawing.Size(137, 29);
+            this.PMtypeLabel12.TabIndex = 58;
+            this.PMtypeLabel12.Text = "Push/Pull 5A";
+            // 
+            // PMtypeLabel13
+            // 
+            this.PMtypeLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMtypeLabel13.AutoSize = true;
+            this.PMtypeLabel13.Location = new System.Drawing.Point(438, 928);
+            this.PMtypeLabel13.Name = "PMtypeLabel13";
+            this.PMtypeLabel13.Size = new System.Drawing.Size(137, 29);
+            this.PMtypeLabel13.TabIndex = 59;
+            this.PMtypeLabel13.Text = "Push/Pull 5A";
+            // 
+            // PMnameBox5
+            // 
+            this.PMnameBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox5.Location = new System.Drawing.Point(141, 375);
+            this.PMnameBox5.MaxLength = 16;
+            this.PMnameBox5.Name = "PMnameBox5";
+            this.PMnameBox5.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox5.TabIndex = 60;
+            // 
+            // PMnameBox6
+            // 
+            this.PMnameBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox6.Location = new System.Drawing.Point(141, 443);
+            this.PMnameBox6.MaxLength = 16;
+            this.PMnameBox6.Name = "PMnameBox6";
+            this.PMnameBox6.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox6.TabIndex = 63;
+            // 
+            // PMnameBox7
+            // 
+            this.PMnameBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox7.Location = new System.Drawing.Point(141, 511);
+            this.PMnameBox7.MaxLength = 16;
+            this.PMnameBox7.Name = "PMnameBox7";
+            this.PMnameBox7.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox7.TabIndex = 66;
+            // 
+            // PMnameBox8
+            // 
+            this.PMnameBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox8.Location = new System.Drawing.Point(141, 579);
+            this.PMnameBox8.MaxLength = 16;
+            this.PMnameBox8.Name = "PMnameBox8";
+            this.PMnameBox8.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox8.TabIndex = 61;
+            // 
+            // PMnameBox9
+            // 
+            this.PMnameBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox9.Location = new System.Drawing.Point(141, 647);
+            this.PMnameBox9.MaxLength = 16;
+            this.PMnameBox9.Name = "PMnameBox9";
+            this.PMnameBox9.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox9.TabIndex = 73;
+            // 
+            // PMnameBox10
+            // 
+            this.PMnameBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox10.Location = new System.Drawing.Point(141, 715);
+            this.PMnameBox10.MaxLength = 16;
+            this.PMnameBox10.Name = "PMnameBox10";
+            this.PMnameBox10.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox10.TabIndex = 72;
+            // 
+            // PMnameBox11
+            // 
+            this.PMnameBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox11.Location = new System.Drawing.Point(141, 783);
+            this.PMnameBox11.MaxLength = 16;
+            this.PMnameBox11.Name = "PMnameBox11";
+            this.PMnameBox11.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox11.TabIndex = 71;
+            // 
+            // PMnameBox12
+            // 
+            this.PMnameBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox12.Location = new System.Drawing.Point(141, 851);
+            this.PMnameBox12.MaxLength = 16;
+            this.PMnameBox12.Name = "PMnameBox12";
+            this.PMnameBox12.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox12.TabIndex = 69;
+            // 
+            // PMnameBox13
+            // 
+            this.PMnameBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMnameBox13.Location = new System.Drawing.Point(141, 924);
+            this.PMnameBox13.MaxLength = 16;
+            this.PMnameBox13.Name = "PMnameBox13";
+            this.PMnameBox13.Size = new System.Drawing.Size(249, 37);
+            this.PMnameBox13.TabIndex = 70;
             // 
             // Cooling_Tab
             // 
@@ -1212,18 +1987,6 @@
             this.serialTimer.Enabled = true;
             this.serialTimer.Interval = 10000;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "High Current",
-            "Puch/Pull 5A"});
-            this.comboBox1.Location = new System.Drawing.Point(496, 474);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 37);
-            this.comboBox1.TabIndex = 2;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1370,7 +2133,70 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox PMnameBox1;
+        private System.Windows.Forms.Label PMchannelLabel1;
+        private System.Windows.Forms.Label PMchannelLabel2;
+        private System.Windows.Forms.Label PMchannelLabel3;
+        private System.Windows.Forms.Label PMchannelLabel4;
+        private System.Windows.Forms.Label PMchannelLabel5;
+        private System.Windows.Forms.Label PMchannelLabel6;
+        private System.Windows.Forms.Label PMchannelLabel7;
+        private System.Windows.Forms.Label PMchannelLabel8;
+        private System.Windows.Forms.Label PMchannelLabel9;
+        private System.Windows.Forms.Label PMchannelLabel10;
+        private System.Windows.Forms.Label PMchannelLabel11;
+        private System.Windows.Forms.Label PMchannelLabel12;
+        private System.Windows.Forms.Label PMchannelLabel13;
+        private System.Windows.Forms.Label PMtypeLabel2;
+        private System.Windows.Forms.Label PMcurrentDrawLabel1;
+        private System.Windows.Forms.Label PMcurrentDrawLabel2;
+        private System.Windows.Forms.Label PMcurrentDrawLabel3;
+        private System.Windows.Forms.Label PMcurrentDrawLabel4;
+        private System.Windows.Forms.Label PMcurrentDrawLabel5;
+        private System.Windows.Forms.Label PMcurrentDrawLabel6;
+        private System.Windows.Forms.Label PMcurrentDrawLabel7;
+        private System.Windows.Forms.Label PMcurrentDrawLabel8;
+        private System.Windows.Forms.Label PMcurrentDrawLabel9;
+        private System.Windows.Forms.Label PMcurrentDrawLabel10;
+        private System.Windows.Forms.Label PMcurrentDrawLabel11;
+        private System.Windows.Forms.Label PMcurrentDrawLabel12;
+        private System.Windows.Forms.Label PMcurrentDrawLabel13;
+        private System.Windows.Forms.Label PMstatusLabel1;
+        private System.Windows.Forms.Label PMstatusLabel2;
+        private System.Windows.Forms.Label PMstatusLabel3;
+        private System.Windows.Forms.Label PMstatusLabel4;
+        private System.Windows.Forms.Label PMstatusLabel5;
+        private System.Windows.Forms.Label PMstatusLabel6;
+        private System.Windows.Forms.Label PMstatusLabel7;
+        private System.Windows.Forms.Label PMstatusLabel8;
+        private System.Windows.Forms.Label PMstatusLabel9;
+        private System.Windows.Forms.Label PMstatusLabel10;
+        private System.Windows.Forms.Label PMstatusLabel11;
+        private System.Windows.Forms.Label PMstatusLabel12;
+        private System.Windows.Forms.Label PMstatusLabel13;
+        private System.Windows.Forms.Label PMtypeLabel1;
+        private System.Windows.Forms.Label PMtypeLabel4;
+        private System.Windows.Forms.Label PMtypeLabel3;
+        private System.Windows.Forms.Label PMtypeLabel5;
+        private System.Windows.Forms.Label PMtypeLabel6;
+        private System.Windows.Forms.Label PMtypeLabel7;
+        private System.Windows.Forms.Label PMtypeLabel8;
+        private System.Windows.Forms.Label PMtypeLabel9;
+        private System.Windows.Forms.Label PMtypeLabel10;
+        private System.Windows.Forms.Label PMtypeLabel11;
+        private System.Windows.Forms.Label PMtypeLabel12;
+        private System.Windows.Forms.Label PMtypeLabel13;
+        private System.Windows.Forms.TextBox PMnameBox4;
+        private System.Windows.Forms.TextBox PMnameBox3;
+        private System.Windows.Forms.TextBox PMnameBox2;
+        private System.Windows.Forms.TextBox PMnameBox5;
+        private System.Windows.Forms.TextBox PMnameBox6;
+        private System.Windows.Forms.TextBox PMnameBox7;
+        private System.Windows.Forms.TextBox PMnameBox8;
+        private System.Windows.Forms.TextBox PMnameBox9;
+        private System.Windows.Forms.TextBox PMnameBox10;
+        private System.Windows.Forms.TextBox PMnameBox11;
+        private System.Windows.Forms.TextBox PMnameBox12;
+        private System.Windows.Forms.TextBox PMnameBox13;
     }
 }
