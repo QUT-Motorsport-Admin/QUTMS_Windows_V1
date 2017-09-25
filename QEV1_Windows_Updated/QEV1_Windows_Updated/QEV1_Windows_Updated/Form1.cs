@@ -27,10 +27,7 @@ namespace QEV1_Windows_Updated
         
         bool errorsEnabled = true;
         bool errorsDisabled = false;
-
-        //ushort addr_chunk = 0;
-        //long data_chunk = 0;
-        
+                
         byte[] incomingString = new byte[60];
         int stringIndex = 0;
         ushort stringMode = 0;

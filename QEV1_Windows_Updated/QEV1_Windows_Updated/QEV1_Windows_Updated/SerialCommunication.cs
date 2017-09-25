@@ -175,74 +175,80 @@ namespace QEV1_Windows_Updated
         /// </summary>
         public void processIncomingBytestream()
         {
-            byte tempByte;
-            
-            // While there is still information to be processed
-            while (qevSerialPort.BytesToRead > 0)
+            try
             {
-                tempByte = (byte)qevSerialPort.ReadByte();
-                if (messageMode == READYMODE)
+                byte tempByte;
+
+                // While there is still information to be processed
+                while (qevSerialPort.BytesToRead > 0)
                 {
-                    // Wait for the signal to start reading (a 'D' character)
-                    if (tempByte == 'D')
+                    tempByte = (byte)qevSerialPort.ReadByte();
+                    if (messageMode == READYMODE)
                     {
-                        messageMode = READINGMODE;
-                        messageIndex = 0;
+                        // Wait for the signal to start reading (a 'D' character)
+                        if (tempByte == 'D')
+                        {
+                            messageMode = READINGMODE;
+                            messageIndex = 0;
+                        }
                     }
-                } else if (messageMode == READINGMODE)
-                {
-                    // Read the incoming message
-                    incomingMessage[messageIndex] = tempByte;
-                    messageIndex++;
-                }
-
-                // If we have reached the end of the message, jump to processing mode
-                if (messageIndex > 31)
-                {
-                    messageMode = PROCESSINGMODE;
-                    break;
-                }
-            }
-
-            if (messageMode == PROCESSINGMODE)
-            {
-                // Return to ready mode for next time
-                messageMode = READYMODE;
-
-                // Restore the 68's (???)
-                for (int i = 0; i < 4; i++)
-                {
-                    for (int j = 0; j < 7; j++)
+                    else if (messageMode == READINGMODE)
                     {
-                        if ((incomingMessage[i + 28] & (1 << j)) > 0) incomingMessage[(i * 7) + j] = 68;
+                        // Read the incoming message
+                        incomingMessage[messageIndex] = tempByte;
+                        messageIndex++;
+                    }
+
+                    // If we have reached the end of the message, jump to processing mode
+                    if (messageIndex > 31)
+                    {
+                        messageMode = PROCESSINGMODE;
+                        break;
                     }
                 }
 
-                headerType = incomingMessage[INDEX_HEADERTYPE];
+                if (messageMode == PROCESSINGMODE)
+                {
+                    // Return to ready mode for next time
+                    messageMode = READYMODE;
 
-                // Do something based on headertype
+                    // Restore the 68's (???)
+                    for (int i = 0; i < 4; i++)
+                    {
+                        for (int j = 0; j < 7; j++)
+                        {
+                            if ((incomingMessage[i + 28] & (1 << j)) > 0) incomingMessage[(i * 7) + j] = 68;
+                        }
+                    }
 
-                avgVolts = (incomingMessage[INDEX_AVGVOLTS] << 8) + incomingMessage[INDEX_AVGVOLTS + 1];
-                avgTemp = (incomingMessage[INDEX_AVGTEMP] << 8) + incomingMessage[INDEX_AVGTEMP + 1];
-                maxCellTemp = (incomingMessage[INDEX_MAXCELLTEMP] << 8) + incomingMessage[INDEX_MAXCELLTEMP + 1];
-                DCCurrent = (incomingMessage[INDEX_DCCURRENT] << 8) + incomingMessage[INDEX_DCCURRENT + 1];
-                inverterTemp = (incomingMessage[INDEX_INVERTERTEMP] << 8) + incomingMessage[INDEX_INVERTERTEMP + 1];
-                coolantTemp = (incomingMessage[INDEX_COOLANTTEMP] << 8) + incomingMessage[INDEX_COOLANTTEMP + 1];
+                    headerType = incomingMessage[INDEX_HEADERTYPE];
 
-                volts1 = (incomingMessage[INDEX_VOLTS1] << 8) + incomingMessage[INDEX_VOLTS1 + 1];
-                volts2 = (incomingMessage[INDEX_VOLTS2] << 8) + incomingMessage[INDEX_VOLTS2 + 1];
-                volts3 = (incomingMessage[INDEX_VOLTS3] << 8) + incomingMessage[INDEX_VOLTS3 + 1];
-                volts4 = (incomingMessage[INDEX_VOLTS4] << 8) + incomingMessage[INDEX_VOLTS4 + 1];
-                volts5 = (incomingMessage[INDEX_VOLTS5] << 8) + incomingMessage[INDEX_VOLTS5 + 1];
-                volts6 = (incomingMessage[INDEX_VOLTS6] << 8) + incomingMessage[INDEX_VOLTS6 + 1];
-                volts7 = (incomingMessage[INDEX_VOLTS7] << 8) + incomingMessage[INDEX_VOLTS7 + 1];
+                    // Do something based on headertype
 
-                throttle = (incomingMessage[INDEX_THROTTLE] << 8) + incomingMessage[INDEX_THROTTLE + 1];
-                rpm = (incomingMessage[INDEX_RPM] << 8) + incomingMessage[INDEX_RPM + 1];
-                enable = incomingMessage[INDEX_ENABLE];
-                // If enable == 0 do something, else to something else
+                    avgVolts = (incomingMessage[INDEX_AVGVOLTS] << 8) + incomingMessage[INDEX_AVGVOLTS + 1];
+                    avgTemp = (incomingMessage[INDEX_AVGTEMP] << 8) + incomingMessage[INDEX_AVGTEMP + 1];
+                    maxCellTemp = (incomingMessage[INDEX_MAXCELLTEMP] << 8) + incomingMessage[INDEX_MAXCELLTEMP + 1];
+                    DCCurrent = (incomingMessage[INDEX_DCCURRENT] << 8) + incomingMessage[INDEX_DCCURRENT + 1];
+                    inverterTemp = (incomingMessage[INDEX_INVERTERTEMP] << 8) + incomingMessage[INDEX_INVERTERTEMP + 1];
+                    coolantTemp = (incomingMessage[INDEX_COOLANTTEMP] << 8) + incomingMessage[INDEX_COOLANTTEMP + 1];
+
+                    volts1 = (incomingMessage[INDEX_VOLTS1] << 8) + incomingMessage[INDEX_VOLTS1 + 1];
+                    volts2 = (incomingMessage[INDEX_VOLTS2] << 8) + incomingMessage[INDEX_VOLTS2 + 1];
+                    volts3 = (incomingMessage[INDEX_VOLTS3] << 8) + incomingMessage[INDEX_VOLTS3 + 1];
+                    volts4 = (incomingMessage[INDEX_VOLTS4] << 8) + incomingMessage[INDEX_VOLTS4 + 1];
+                    volts5 = (incomingMessage[INDEX_VOLTS5] << 8) + incomingMessage[INDEX_VOLTS5 + 1];
+                    volts6 = (incomingMessage[INDEX_VOLTS6] << 8) + incomingMessage[INDEX_VOLTS6 + 1];
+                    volts7 = (incomingMessage[INDEX_VOLTS7] << 8) + incomingMessage[INDEX_VOLTS7 + 1];
+
+                    throttle = (incomingMessage[INDEX_THROTTLE] << 8) + incomingMessage[INDEX_THROTTLE + 1];
+                    rpm = (incomingMessage[INDEX_RPM] << 8) + incomingMessage[INDEX_RPM + 1];
+                    enable = incomingMessage[INDEX_ENABLE];
+                    // If enable == 0 do something, else to something else
+                }
+            } catch
+            {
+                MessageBox.Show("Error reading ports", "Port Error");
             }
-
             
         }
 
