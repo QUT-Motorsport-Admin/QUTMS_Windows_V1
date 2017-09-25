@@ -118,7 +118,6 @@
             this.PMcurrentDrawLabel2 = new System.Windows.Forms.Label();
             this.PMcurrentDrawLabel3 = new System.Windows.Forms.Label();
             this.PMcurrentDrawLabel4 = new System.Windows.Forms.Label();
-            this.PMcurrentDrawLabel5 = new System.Windows.Forms.Label();
             this.PMcurrentDrawLabel6 = new System.Windows.Forms.Label();
             this.PMcurrentDrawLabel7 = new System.Windows.Forms.Label();
             this.PMcurrentDrawLabel8 = new System.Windows.Forms.Label();
@@ -192,6 +191,7 @@
             this.disconnectSerialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.linkToTelemetryServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serialTimer = new System.Windows.Forms.Timer(this.components);
+            this.PMcurrentDrawLabel5 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.mainScreenTabControl.SuspendLayout();
             this.Overview_Tab.SuspendLayout();
@@ -860,7 +860,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 473F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 513F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 212F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tableLayoutPanel1.Controls.Add(this.PMnameBox4, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.PMnameBox3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.PMnameBox2, 1, 2);
@@ -984,7 +984,7 @@
             // 
             this.PMtypeLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel2.AutoSize = true;
-            this.PMtypeLabel2.Location = new System.Drawing.Point(437, 175);
+            this.PMtypeLabel2.Location = new System.Drawing.Point(436, 175);
             this.PMtypeLabel2.Name = "PMtypeLabel2";
             this.PMtypeLabel2.Size = new System.Drawing.Size(138, 29);
             this.PMtypeLabel2.TabIndex = 51;
@@ -994,17 +994,18 @@
             // 
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(1810, 29);
+            this.label28.Location = new System.Drawing.Point(1807, 15);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(145, 29);
+            this.label28.Size = new System.Drawing.Size(150, 58);
             this.label28.TabIndex = 6;
-            this.label28.Text = "Current Draw";
+            this.label28.Text = "Current Draw (Amps)";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label27
             // 
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(1644, 29);
+            this.label27.Location = new System.Drawing.Point(1643, 29);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(74, 29);
             this.label27.TabIndex = 5;
@@ -1014,7 +1015,7 @@
             // 
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(1297, 29);
+            this.label26.Location = new System.Drawing.Point(1296, 29);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(66, 29);
             this.label26.TabIndex = 4;
@@ -1024,7 +1025,7 @@
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(772, 29);
+            this.label23.Location = new System.Drawing.Point(771, 29);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(131, 29);
             this.label23.TabIndex = 3;
@@ -1034,7 +1035,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(476, 29);
+            this.label8.Location = new System.Drawing.Point(475, 29);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 29);
             this.label8.TabIndex = 2;
@@ -1044,7 +1045,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(230, 29);
+            this.label5.Location = new System.Drawing.Point(229, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 29);
             this.label5.TabIndex = 1;
@@ -1204,131 +1205,133 @@
             // 
             this.PMcurrentDrawLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel1.AutoSize = true;
-            this.PMcurrentDrawLabel1.Location = new System.Drawing.Point(1831, 107);
+            this.PMcurrentDrawLabel1.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel1.Location = new System.Drawing.Point(1846, 97);
             this.PMcurrentDrawLabel1.Name = "PMcurrentDrawLabel1";
-            this.PMcurrentDrawLabel1.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel1.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel1.TabIndex = 21;
-            this.PMcurrentDrawLabel1.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel1.Text = "0.0";
             // 
             // PMcurrentDrawLabel2
             // 
             this.PMcurrentDrawLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel2.AutoSize = true;
-            this.PMcurrentDrawLabel2.Location = new System.Drawing.Point(1831, 175);
+            this.PMcurrentDrawLabel2.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel2.Location = new System.Drawing.Point(1846, 165);
             this.PMcurrentDrawLabel2.Name = "PMcurrentDrawLabel2";
-            this.PMcurrentDrawLabel2.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel2.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel2.TabIndex = 22;
-            this.PMcurrentDrawLabel2.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel2.Text = "0.0";
             // 
             // PMcurrentDrawLabel3
             // 
             this.PMcurrentDrawLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel3.AutoSize = true;
-            this.PMcurrentDrawLabel3.Location = new System.Drawing.Point(1831, 243);
+            this.PMcurrentDrawLabel3.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel3.Location = new System.Drawing.Point(1846, 233);
             this.PMcurrentDrawLabel3.Name = "PMcurrentDrawLabel3";
-            this.PMcurrentDrawLabel3.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel3.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel3.TabIndex = 23;
-            this.PMcurrentDrawLabel3.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel3.Text = "0.0";
             // 
             // PMcurrentDrawLabel4
             // 
             this.PMcurrentDrawLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel4.AutoSize = true;
-            this.PMcurrentDrawLabel4.Location = new System.Drawing.Point(1831, 311);
+            this.PMcurrentDrawLabel4.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel4.Location = new System.Drawing.Point(1846, 301);
             this.PMcurrentDrawLabel4.Name = "PMcurrentDrawLabel4";
-            this.PMcurrentDrawLabel4.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel4.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel4.TabIndex = 24;
-            this.PMcurrentDrawLabel4.Text = "0.0 Amps";
-            // 
-            // PMcurrentDrawLabel5
-            // 
-            this.PMcurrentDrawLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PMcurrentDrawLabel5.AutoSize = true;
-            this.PMcurrentDrawLabel5.Location = new System.Drawing.Point(1831, 379);
-            this.PMcurrentDrawLabel5.Name = "PMcurrentDrawLabel5";
-            this.PMcurrentDrawLabel5.Size = new System.Drawing.Size(103, 29);
-            this.PMcurrentDrawLabel5.TabIndex = 25;
-            this.PMcurrentDrawLabel5.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel4.Text = "0.0";
             // 
             // PMcurrentDrawLabel6
             // 
             this.PMcurrentDrawLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel6.AutoSize = true;
-            this.PMcurrentDrawLabel6.Location = new System.Drawing.Point(1831, 447);
+            this.PMcurrentDrawLabel6.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel6.Location = new System.Drawing.Point(1846, 437);
             this.PMcurrentDrawLabel6.Name = "PMcurrentDrawLabel6";
-            this.PMcurrentDrawLabel6.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel6.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel6.TabIndex = 26;
-            this.PMcurrentDrawLabel6.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel6.Text = "0.0";
             // 
             // PMcurrentDrawLabel7
             // 
             this.PMcurrentDrawLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel7.AutoSize = true;
-            this.PMcurrentDrawLabel7.Location = new System.Drawing.Point(1831, 515);
+            this.PMcurrentDrawLabel7.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel7.Location = new System.Drawing.Point(1846, 505);
             this.PMcurrentDrawLabel7.Name = "PMcurrentDrawLabel7";
-            this.PMcurrentDrawLabel7.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel7.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel7.TabIndex = 27;
-            this.PMcurrentDrawLabel7.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel7.Text = "0.0";
             // 
             // PMcurrentDrawLabel8
             // 
             this.PMcurrentDrawLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel8.AutoSize = true;
-            this.PMcurrentDrawLabel8.Location = new System.Drawing.Point(1831, 583);
+            this.PMcurrentDrawLabel8.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel8.Location = new System.Drawing.Point(1846, 573);
             this.PMcurrentDrawLabel8.Name = "PMcurrentDrawLabel8";
-            this.PMcurrentDrawLabel8.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel8.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel8.TabIndex = 28;
-            this.PMcurrentDrawLabel8.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel8.Text = "0.0";
             // 
             // PMcurrentDrawLabel9
             // 
             this.PMcurrentDrawLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel9.AutoSize = true;
-            this.PMcurrentDrawLabel9.Location = new System.Drawing.Point(1831, 651);
+            this.PMcurrentDrawLabel9.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel9.Location = new System.Drawing.Point(1846, 641);
             this.PMcurrentDrawLabel9.Name = "PMcurrentDrawLabel9";
-            this.PMcurrentDrawLabel9.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel9.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel9.TabIndex = 29;
-            this.PMcurrentDrawLabel9.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel9.Text = "0.0";
             // 
             // PMcurrentDrawLabel10
             // 
             this.PMcurrentDrawLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel10.AutoSize = true;
-            this.PMcurrentDrawLabel10.Location = new System.Drawing.Point(1831, 719);
+            this.PMcurrentDrawLabel10.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel10.Location = new System.Drawing.Point(1846, 709);
             this.PMcurrentDrawLabel10.Name = "PMcurrentDrawLabel10";
-            this.PMcurrentDrawLabel10.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel10.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel10.TabIndex = 30;
-            this.PMcurrentDrawLabel10.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel10.Text = "0.0";
             // 
             // PMcurrentDrawLabel11
             // 
             this.PMcurrentDrawLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel11.AutoSize = true;
-            this.PMcurrentDrawLabel11.Location = new System.Drawing.Point(1831, 787);
+            this.PMcurrentDrawLabel11.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel11.Location = new System.Drawing.Point(1846, 777);
             this.PMcurrentDrawLabel11.Name = "PMcurrentDrawLabel11";
-            this.PMcurrentDrawLabel11.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel11.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel11.TabIndex = 31;
-            this.PMcurrentDrawLabel11.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel11.Text = "0.0";
             // 
             // PMcurrentDrawLabel12
             // 
             this.PMcurrentDrawLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel12.AutoSize = true;
-            this.PMcurrentDrawLabel12.Location = new System.Drawing.Point(1831, 855);
+            this.PMcurrentDrawLabel12.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel12.Location = new System.Drawing.Point(1846, 845);
             this.PMcurrentDrawLabel12.Name = "PMcurrentDrawLabel12";
-            this.PMcurrentDrawLabel12.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel12.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel12.TabIndex = 32;
-            this.PMcurrentDrawLabel12.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel12.Text = "0.0";
             // 
             // PMcurrentDrawLabel13
             // 
             this.PMcurrentDrawLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel13.AutoSize = true;
-            this.PMcurrentDrawLabel13.Location = new System.Drawing.Point(1831, 928);
+            this.PMcurrentDrawLabel13.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel13.Location = new System.Drawing.Point(1846, 918);
             this.PMcurrentDrawLabel13.Name = "PMcurrentDrawLabel13";
-            this.PMcurrentDrawLabel13.Size = new System.Drawing.Size(103, 29);
+            this.PMcurrentDrawLabel13.Size = new System.Drawing.Size(72, 49);
             this.PMcurrentDrawLabel13.TabIndex = 33;
-            this.PMcurrentDrawLabel13.Text = "0.0 Amps";
+            this.PMcurrentDrawLabel13.Text = "0.0";
             // 
             // PMstatusLabel1
             // 
@@ -1336,7 +1339,7 @@
             this.PMstatusLabel1.AutoSize = true;
             this.PMstatusLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.PMstatusLabel1.ForeColor = System.Drawing.Color.Green;
-            this.PMstatusLabel1.Location = new System.Drawing.Point(1659, 107);
+            this.PMstatusLabel1.Location = new System.Drawing.Point(1658, 107);
             this.PMstatusLabel1.Name = "PMstatusLabel1";
             this.PMstatusLabel1.Size = new System.Drawing.Size(45, 29);
             this.PMstatusLabel1.TabIndex = 34;
@@ -1346,7 +1349,7 @@
             // 
             this.PMstatusLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel2.AutoSize = true;
-            this.PMstatusLabel2.Location = new System.Drawing.Point(1656, 175);
+            this.PMstatusLabel2.Location = new System.Drawing.Point(1655, 175);
             this.PMstatusLabel2.Name = "PMstatusLabel2";
             this.PMstatusLabel2.Size = new System.Drawing.Size(51, 29);
             this.PMstatusLabel2.TabIndex = 35;
@@ -1358,7 +1361,7 @@
             this.PMstatusLabel3.AutoSize = true;
             this.PMstatusLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PMstatusLabel3.ForeColor = System.Drawing.Color.DimGray;
-            this.PMstatusLabel3.Location = new System.Drawing.Point(1627, 243);
+            this.PMstatusLabel3.Location = new System.Drawing.Point(1626, 243);
             this.PMstatusLabel3.Name = "PMstatusLabel3";
             this.PMstatusLabel3.Size = new System.Drawing.Size(109, 29);
             this.PMstatusLabel3.TabIndex = 36;
@@ -1370,7 +1373,7 @@
             this.PMstatusLabel4.AutoSize = true;
             this.PMstatusLabel4.BackColor = System.Drawing.Color.Red;
             this.PMstatusLabel4.ForeColor = System.Drawing.Color.White;
-            this.PMstatusLabel4.Location = new System.Drawing.Point(1653, 311);
+            this.PMstatusLabel4.Location = new System.Drawing.Point(1652, 311);
             this.PMstatusLabel4.Name = "PMstatusLabel4";
             this.PMstatusLabel4.Size = new System.Drawing.Size(56, 29);
             this.PMstatusLabel4.TabIndex = 37;
@@ -1382,7 +1385,7 @@
             this.PMstatusLabel5.AutoSize = true;
             this.PMstatusLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PMstatusLabel5.ForeColor = System.Drawing.Color.Red;
-            this.PMstatusLabel5.Location = new System.Drawing.Point(1645, 379);
+            this.PMstatusLabel5.Location = new System.Drawing.Point(1644, 379);
             this.PMstatusLabel5.Name = "PMstatusLabel5";
             this.PMstatusLabel5.Size = new System.Drawing.Size(72, 29);
             this.PMstatusLabel5.TabIndex = 38;
@@ -1392,7 +1395,7 @@
             // 
             this.PMstatusLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel6.AutoSize = true;
-            this.PMstatusLabel6.Location = new System.Drawing.Point(1656, 447);
+            this.PMstatusLabel6.Location = new System.Drawing.Point(1655, 447);
             this.PMstatusLabel6.Name = "PMstatusLabel6";
             this.PMstatusLabel6.Size = new System.Drawing.Size(51, 29);
             this.PMstatusLabel6.TabIndex = 39;
@@ -1402,7 +1405,7 @@
             // 
             this.PMstatusLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel7.AutoSize = true;
-            this.PMstatusLabel7.Location = new System.Drawing.Point(1656, 515);
+            this.PMstatusLabel7.Location = new System.Drawing.Point(1655, 515);
             this.PMstatusLabel7.Name = "PMstatusLabel7";
             this.PMstatusLabel7.Size = new System.Drawing.Size(51, 29);
             this.PMstatusLabel7.TabIndex = 40;
@@ -1412,7 +1415,7 @@
             // 
             this.PMstatusLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel8.AutoSize = true;
-            this.PMstatusLabel8.Location = new System.Drawing.Point(1656, 583);
+            this.PMstatusLabel8.Location = new System.Drawing.Point(1655, 583);
             this.PMstatusLabel8.Name = "PMstatusLabel8";
             this.PMstatusLabel8.Size = new System.Drawing.Size(51, 29);
             this.PMstatusLabel8.TabIndex = 41;
@@ -1422,7 +1425,7 @@
             // 
             this.PMstatusLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel9.AutoSize = true;
-            this.PMstatusLabel9.Location = new System.Drawing.Point(1656, 651);
+            this.PMstatusLabel9.Location = new System.Drawing.Point(1655, 651);
             this.PMstatusLabel9.Name = "PMstatusLabel9";
             this.PMstatusLabel9.Size = new System.Drawing.Size(51, 29);
             this.PMstatusLabel9.TabIndex = 42;
@@ -1432,7 +1435,7 @@
             // 
             this.PMstatusLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel10.AutoSize = true;
-            this.PMstatusLabel10.Location = new System.Drawing.Point(1656, 719);
+            this.PMstatusLabel10.Location = new System.Drawing.Point(1655, 719);
             this.PMstatusLabel10.Name = "PMstatusLabel10";
             this.PMstatusLabel10.Size = new System.Drawing.Size(51, 29);
             this.PMstatusLabel10.TabIndex = 43;
@@ -1442,7 +1445,7 @@
             // 
             this.PMstatusLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel11.AutoSize = true;
-            this.PMstatusLabel11.Location = new System.Drawing.Point(1656, 787);
+            this.PMstatusLabel11.Location = new System.Drawing.Point(1655, 787);
             this.PMstatusLabel11.Name = "PMstatusLabel11";
             this.PMstatusLabel11.Size = new System.Drawing.Size(51, 29);
             this.PMstatusLabel11.TabIndex = 44;
@@ -1452,7 +1455,7 @@
             // 
             this.PMstatusLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel12.AutoSize = true;
-            this.PMstatusLabel12.Location = new System.Drawing.Point(1656, 855);
+            this.PMstatusLabel12.Location = new System.Drawing.Point(1655, 855);
             this.PMstatusLabel12.Name = "PMstatusLabel12";
             this.PMstatusLabel12.Size = new System.Drawing.Size(51, 29);
             this.PMstatusLabel12.TabIndex = 45;
@@ -1462,7 +1465,7 @@
             // 
             this.PMstatusLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel13.AutoSize = true;
-            this.PMstatusLabel13.Location = new System.Drawing.Point(1656, 928);
+            this.PMstatusLabel13.Location = new System.Drawing.Point(1655, 928);
             this.PMstatusLabel13.Name = "PMstatusLabel13";
             this.PMstatusLabel13.Size = new System.Drawing.Size(51, 29);
             this.PMstatusLabel13.TabIndex = 46;
@@ -1472,7 +1475,7 @@
             // 
             this.PMtypeLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel1.AutoSize = true;
-            this.PMtypeLabel1.Location = new System.Drawing.Point(437, 107);
+            this.PMtypeLabel1.Location = new System.Drawing.Point(436, 107);
             this.PMtypeLabel1.Name = "PMtypeLabel1";
             this.PMtypeLabel1.Size = new System.Drawing.Size(138, 29);
             this.PMtypeLabel1.TabIndex = 47;
@@ -1482,7 +1485,7 @@
             // 
             this.PMtypeLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel4.AutoSize = true;
-            this.PMtypeLabel4.Location = new System.Drawing.Point(437, 311);
+            this.PMtypeLabel4.Location = new System.Drawing.Point(436, 311);
             this.PMtypeLabel4.Name = "PMtypeLabel4";
             this.PMtypeLabel4.Size = new System.Drawing.Size(138, 29);
             this.PMtypeLabel4.TabIndex = 54;
@@ -1492,7 +1495,7 @@
             // 
             this.PMtypeLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel3.AutoSize = true;
-            this.PMtypeLabel3.Location = new System.Drawing.Point(437, 243);
+            this.PMtypeLabel3.Location = new System.Drawing.Point(436, 243);
             this.PMtypeLabel3.Name = "PMtypeLabel3";
             this.PMtypeLabel3.Size = new System.Drawing.Size(138, 29);
             this.PMtypeLabel3.TabIndex = 50;
@@ -1502,7 +1505,7 @@
             // 
             this.PMtypeLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel5.AutoSize = true;
-            this.PMtypeLabel5.Location = new System.Drawing.Point(437, 379);
+            this.PMtypeLabel5.Location = new System.Drawing.Point(436, 379);
             this.PMtypeLabel5.Name = "PMtypeLabel5";
             this.PMtypeLabel5.Size = new System.Drawing.Size(138, 29);
             this.PMtypeLabel5.TabIndex = 52;
@@ -1512,7 +1515,7 @@
             // 
             this.PMtypeLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel6.AutoSize = true;
-            this.PMtypeLabel6.Location = new System.Drawing.Point(437, 447);
+            this.PMtypeLabel6.Location = new System.Drawing.Point(436, 447);
             this.PMtypeLabel6.Name = "PMtypeLabel6";
             this.PMtypeLabel6.Size = new System.Drawing.Size(138, 29);
             this.PMtypeLabel6.TabIndex = 53;
@@ -1522,7 +1525,7 @@
             // 
             this.PMtypeLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel7.AutoSize = true;
-            this.PMtypeLabel7.Location = new System.Drawing.Point(437, 515);
+            this.PMtypeLabel7.Location = new System.Drawing.Point(436, 515);
             this.PMtypeLabel7.Name = "PMtypeLabel7";
             this.PMtypeLabel7.Size = new System.Drawing.Size(138, 29);
             this.PMtypeLabel7.TabIndex = 49;
@@ -1532,7 +1535,7 @@
             // 
             this.PMtypeLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel8.AutoSize = true;
-            this.PMtypeLabel8.Location = new System.Drawing.Point(437, 583);
+            this.PMtypeLabel8.Location = new System.Drawing.Point(436, 583);
             this.PMtypeLabel8.Name = "PMtypeLabel8";
             this.PMtypeLabel8.Size = new System.Drawing.Size(138, 29);
             this.PMtypeLabel8.TabIndex = 48;
@@ -1542,7 +1545,7 @@
             // 
             this.PMtypeLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel9.AutoSize = true;
-            this.PMtypeLabel9.Location = new System.Drawing.Point(437, 651);
+            this.PMtypeLabel9.Location = new System.Drawing.Point(436, 651);
             this.PMtypeLabel9.Name = "PMtypeLabel9";
             this.PMtypeLabel9.Size = new System.Drawing.Size(138, 29);
             this.PMtypeLabel9.TabIndex = 55;
@@ -1552,7 +1555,7 @@
             // 
             this.PMtypeLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel10.AutoSize = true;
-            this.PMtypeLabel10.Location = new System.Drawing.Point(438, 719);
+            this.PMtypeLabel10.Location = new System.Drawing.Point(437, 719);
             this.PMtypeLabel10.Name = "PMtypeLabel10";
             this.PMtypeLabel10.Size = new System.Drawing.Size(137, 29);
             this.PMtypeLabel10.TabIndex = 56;
@@ -1562,7 +1565,7 @@
             // 
             this.PMtypeLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel11.AutoSize = true;
-            this.PMtypeLabel11.Location = new System.Drawing.Point(438, 787);
+            this.PMtypeLabel11.Location = new System.Drawing.Point(437, 787);
             this.PMtypeLabel11.Name = "PMtypeLabel11";
             this.PMtypeLabel11.Size = new System.Drawing.Size(137, 29);
             this.PMtypeLabel11.TabIndex = 57;
@@ -1572,7 +1575,7 @@
             // 
             this.PMtypeLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel12.AutoSize = true;
-            this.PMtypeLabel12.Location = new System.Drawing.Point(438, 855);
+            this.PMtypeLabel12.Location = new System.Drawing.Point(437, 855);
             this.PMtypeLabel12.Name = "PMtypeLabel12";
             this.PMtypeLabel12.Size = new System.Drawing.Size(137, 29);
             this.PMtypeLabel12.TabIndex = 58;
@@ -1582,7 +1585,7 @@
             // 
             this.PMtypeLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel13.AutoSize = true;
-            this.PMtypeLabel13.Location = new System.Drawing.Point(438, 928);
+            this.PMtypeLabel13.Location = new System.Drawing.Point(437, 928);
             this.PMtypeLabel13.Name = "PMtypeLabel13";
             this.PMtypeLabel13.Size = new System.Drawing.Size(137, 29);
             this.PMtypeLabel13.TabIndex = 59;
@@ -1987,6 +1990,17 @@
             this.serialTimer.Enabled = true;
             this.serialTimer.Interval = 10000;
             // 
+            // PMcurrentDrawLabel5
+            // 
+            this.PMcurrentDrawLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PMcurrentDrawLabel5.AutoSize = true;
+            this.PMcurrentDrawLabel5.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PMcurrentDrawLabel5.Location = new System.Drawing.Point(1846, 369);
+            this.PMcurrentDrawLabel5.Name = "PMcurrentDrawLabel5";
+            this.PMcurrentDrawLabel5.Size = new System.Drawing.Size(72, 49);
+            this.PMcurrentDrawLabel5.TabIndex = 25;
+            this.PMcurrentDrawLabel5.Text = "0.0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2152,7 +2166,6 @@
         private System.Windows.Forms.Label PMcurrentDrawLabel2;
         private System.Windows.Forms.Label PMcurrentDrawLabel3;
         private System.Windows.Forms.Label PMcurrentDrawLabel4;
-        private System.Windows.Forms.Label PMcurrentDrawLabel5;
         private System.Windows.Forms.Label PMcurrentDrawLabel6;
         private System.Windows.Forms.Label PMcurrentDrawLabel7;
         private System.Windows.Forms.Label PMcurrentDrawLabel8;
@@ -2198,5 +2211,6 @@
         private System.Windows.Forms.TextBox PMnameBox11;
         private System.Windows.Forms.TextBox PMnameBox12;
         private System.Windows.Forms.TextBox PMnameBox13;
+        private System.Windows.Forms.Label PMcurrentDrawLabel5;
     }
 }
