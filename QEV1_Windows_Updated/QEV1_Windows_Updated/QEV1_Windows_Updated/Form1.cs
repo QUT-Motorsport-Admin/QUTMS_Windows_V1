@@ -266,7 +266,5 @@ namespace QEV1_Windows_Updated
                 balancingLabel.Text = "Balancing Off";
             }
         }
-
     }
-
 }
