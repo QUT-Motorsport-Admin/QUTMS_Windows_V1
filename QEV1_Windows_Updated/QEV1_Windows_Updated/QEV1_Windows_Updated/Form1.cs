@@ -38,6 +38,9 @@ namespace QEV1_Windows_Updated
 
         public const int OVERVIEW = 1;
 
+        private Label[,] frontAccumulatorValues;
+        private Label[,] rearAccumulatorValues;
+
         SerialCommunication qevSerialCom;
 
 
@@ -47,6 +50,18 @@ namespace QEV1_Windows_Updated
         public Form1()
         {
             InitializeComponent();
+            frontAccumulatorValues = new Label[6,3]{ { minFrontAccumulatorValue1, maxFrontAccumulatorValue1, avgFrontAccumulatorValue1 },
+                                                        { minFrontAccumulatorValue2, maxFrontAccumulatorValue2, avgFrontAccumulatorValue2 },
+                                                        { minFrontAccumulatorValue3, maxFrontAccumulatorValue3, avgFrontAccumulatorValue3 },
+                                                        { minFrontAccumulatorValue4, maxFrontAccumulatorValue4, avgFrontAccumulatorValue4 },
+                                                        { minFrontAccumulatorValue5, maxFrontAccumulatorValue5, avgFrontAccumulatorValue5 },
+                                                        { minFrontAccumulatorValue6, maxFrontAccumulatorValue6, avgFrontAccumulatorValue6 }};
+            rearAccumulatorValues = new Label[6, 3] { { minRearAccumulatorValue1, maxRearAccumulatorValue1, avgRearAccumulatorValue1 },
+                                                        { minRearAccumulatorValue2, maxRearAccumulatorValue2, avgRearAccumulatorValue2 },
+                                                        { minRearAccumulatorValue3, maxRearAccumulatorValue3, avgRearAccumulatorValue3 },
+                                                        { minRearAccumulatorValue4, maxRearAccumulatorValue4, avgRearAccumulatorValue4 },
+                                                        { minRearAccumulatorValue5, maxRearAccumulatorValue5, avgRearAccumulatorValue5 },
+                                                        { minRearAccumulatorValue6, maxRearAccumulatorValue6, avgRearAccumulatorValue6 }};
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -266,5 +281,51 @@ namespace QEV1_Windows_Updated
                 balancingLabel.Text = "Balancing Off";
             }
         }
+
+        //front accumulator Event handlers
+        private void frontAccumulatorBrick1_Click(object sender, EventArgs e) {
+            MessageBox.Show("front Accumulator 1 success");
+        }
+        private void frontAccumulatorBrick2_Click(object sender, EventArgs e) {
+            MessageBox.Show("front Accumulator 2 success");
+        }
+        private void frontAccumulatorBrick3_Click(object sender, EventArgs e) {
+            MessageBox.Show("front Accumulator 3 success");
+        }
+        private void frontAccumulatorBrick4_Click(object sender, EventArgs e) {
+            MessageBox.Show("front Accumulator 4 success");
+        }
+        private void frontAccumulatorBrick5_Click(object sender, EventArgs e) {
+            MessageBox.Show("front Accumulator 5 success");
+        }
+        private void frontAccumulatorBrick6_Click(object sender, EventArgs e) {
+            MessageBox.Show("front Accumulator 6 success");
+        }
+
+        //rear accumulator Event handlers
+        private void rearAccumulatorBrick1_Click(object sender, EventArgs e) {
+            MessageBox.Show("rear Accumulator 1 success");
+        }
+
+        private void rearAccumulatorBrick2_Click(object sender, EventArgs e) {
+            MessageBox.Show("rear Accumulator 2 success");
+        }
+
+        private void rearAccumulatorBrick3_Click(object sender, EventArgs e) {
+            MessageBox.Show("rear Accumulator 3 success");
+        }
+
+        private void rearAccumulatorBrick4_Click(object sender, EventArgs e) {
+            MessageBox.Show("rear Accumulator 4 success");
+        }
+
+        private void rearAccumulatorBrick5_Click(object sender, EventArgs e) {
+            MessageBox.Show("rear Accumulator 5 success");
+        }
+
+        private void rearAccumulatorBrick6_Click(object sender, EventArgs e) {
+            MessageBox.Show("rear Accumulator 6 success");
+        }
     }
+
 }
