@@ -281,8 +281,7 @@ namespace QEV1_Windows_Updated
                 balancingLabel.Text = "Balancing Off";
             }
         }
-
-        //front accumulator Event handlers
+        #region Front Accumulator Event handlers
         private void frontAccumulatorBrick1_Click(object sender, EventArgs e) {
             MessageBox.Show("front Accumulator 1 success");
         }
@@ -301,8 +300,8 @@ namespace QEV1_Windows_Updated
         private void frontAccumulatorBrick6_Click(object sender, EventArgs e) {
             MessageBox.Show("front Accumulator 6 success");
         }
-
-        //rear accumulator Event handlers
+        #endregion
+        #region Rear Accumulator Event handlers
         private void rearAccumulatorBrick1_Click(object sender, EventArgs e) {
             MessageBox.Show("rear Accumulator 1 success");
         }
@@ -326,6 +325,6 @@ namespace QEV1_Windows_Updated
         private void rearAccumulatorBrick6_Click(object sender, EventArgs e) {
             MessageBox.Show("rear Accumulator 6 success");
         }
+        #endregion
     }
-
 }
