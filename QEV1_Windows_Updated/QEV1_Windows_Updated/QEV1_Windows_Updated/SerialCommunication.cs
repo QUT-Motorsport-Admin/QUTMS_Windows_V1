@@ -92,6 +92,7 @@ namespace QEV1_Windows_Updated
         System.Windows.Forms.Timer qevDataTimer;
         Serial qevSerial;
 
+        private Queue<Packet> packetQueue;
 
         private int portNumberIndex;
         private bool ECUconnected;
@@ -118,8 +119,10 @@ namespace QEV1_Windows_Updated
             qevSerialPort = serialPortIn;
             qevDataTimer = timerIn;
 
+            packetQueue = new Queue<Packet>();
+
             incomingMessage = new byte[MESSAGESIZE];
-            processIncomingBytestream();
+            //processIncomingBytestream();
         }
 
         /// <summary>
@@ -185,7 +188,7 @@ namespace QEV1_Windows_Updated
         /// <summary>
         /// Reads and analyses an incoming stream of bytes
         /// </summary>
-        public Packet processIncomingBytestream()
+        public void processIncomingBytestream()
         {
             try
             {
@@ -275,18 +278,15 @@ namespace QEV1_Windows_Updated
                     {
                         newPacket.AddMessage(incomingMessage[i]);
                     }
-                    return newPacket;
+                    
+                    // Add Packet to the Queue
+                    packetQueue.Enqueue(newPacket);
                 }
-                return null;
-
-
             }
             catch
             {
                 MessageBox.Show("Error reading ports", "Port Error");
             }
-            return null;
-
         }
 
         public void setAddressChunk(ushort value)
@@ -390,6 +390,11 @@ namespace QEV1_Windows_Updated
                 qevSerialPort.Close();
                 return (int)connectSerialCodes.disconnect;
             }
+        }
+
+        public Packet GetNextPacket()
+        {
+            return packetQueue.Dequeue();
         }
 
 

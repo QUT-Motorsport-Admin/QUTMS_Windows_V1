@@ -154,6 +154,7 @@ namespace QEV1_Windows_Updated
         {
             try
             {                                
+                // Send Data to the CC depending on opened tab
                 if (mainScreenTabControl.SelectedTab == Accumulators_Tab) qevSerialCom.sendDataToSerial(2);            //packet type 2
                 else if (mainScreenTabControl.SelectedTab == Inverters_Tab) qevSerialCom.sendDataToSerial(3);          //packet type 3
                 else if (mainScreenTabControl.SelectedTab == TorqueVectoring_Tab) qevSerialCom.sendDataToSerial(4);    //packet type 4
@@ -163,8 +164,12 @@ namespace QEV1_Windows_Updated
                 else if (mainScreenTabControl.SelectedTab == Safety_Tab) qevSerialCom.sendDataToSerial(8);             //packet type 8
                 else if (mainScreenTabControl.SelectedTab == Diagnostics_Tab) qevSerialCom.sendDataToSerial(9);        //packet type 9
                 else qevSerialCom.sendDataToSerial(1);
-                                
-                //Thread.Sleep(10);
+
+                // Thread Sleep called from serial function
+
+                // Read data from the CC
+                qevSerialCom.processIncomingBytestream();
+
             }
 
             catch
@@ -326,5 +331,24 @@ namespace QEV1_Windows_Updated
             MessageBox.Show("rear Accumulator 6 success");
         }
         #endregion
+
+        private void guiUpdateTimer_Tick(object sender, EventArgs e)
+        {
+            // Read the next packet
+            try
+            {
+                Packet currentPacket = qevSerialCom.GetNextPacket();
+                statusStripErrorFlag.Text = "No Errors";
+                
+                // Update the GUI depending on packet contents and current tab index
+
+            }
+
+            catch
+            {
+                // Could not retrieve a packet
+                statusStripErrorFlag.Text = "Could Not Retrieve Next Packet";
+            }
+        }
     }
 }
