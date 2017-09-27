@@ -38,19 +38,39 @@ namespace QEV1_Windows_Updated
 
         public const int OVERVIEW = 1;
 
+        private Label[] overviewValues;
+
         private Label[,] frontAccumulatorValues;
         private Label[,] rearAccumulatorValues;
 
         SerialCommunication qevSerialCom;
-
-
-
-
-
+        
         public Form1()
         {
             InitializeComponent();
-            frontAccumulatorValues = new Label[6,3]{ { minFrontAccumulatorValue1, maxFrontAccumulatorValue1, avgFrontAccumulatorValue1 },
+            InitialiseLabelArrays();
+
+        }
+
+        private void InitialiseLabelArrays() {
+            overviewValues = new Label[]
+            {
+                lblAcc1MinVolts, lblAcc1MaxVolts, lblAcc1AvVolts,
+                lblAcc1MinTemp, lblAcc1MaxTemp, lblAcc1AvTemp,
+                lblAcc2MinVolts, lblAcc2MaxVolts, lblAcc2AvVolts,
+                lblAcc2MinTemp, lblAcc2MaxTemp, lblAcc2AvTemp,
+
+                lblOverviewSpeed, lblOverviewAcceleratorPedal, lblOverviewBrakePedal,
+                lblOverviewBrakeFrontPressure, lblOverviewBrakeRearPressure, lblOverviewSteeringAngle,
+
+                lblInv1Current, lblInv1Temp,
+                lblInv2Current, lblInv2Temp,
+                lblInv3Current, lblInv3Temp,
+                lblInv4Current, lblInv4Temp,
+
+                lblOverviewLongG, lblOverviewLatG, lblOverviewYawRate
+            };
+            frontAccumulatorValues = new Label[6, 3]{ { minFrontAccumulatorValue1, maxFrontAccumulatorValue1, avgFrontAccumulatorValue1 },
                                                         { minFrontAccumulatorValue2, maxFrontAccumulatorValue2, avgFrontAccumulatorValue2 },
                                                         { minFrontAccumulatorValue3, maxFrontAccumulatorValue3, avgFrontAccumulatorValue3 },
                                                         { minFrontAccumulatorValue4, maxFrontAccumulatorValue4, avgFrontAccumulatorValue4 },
@@ -62,6 +82,7 @@ namespace QEV1_Windows_Updated
                                                         { minRearAccumulatorValue4, maxRearAccumulatorValue4, avgRearAccumulatorValue4 },
                                                         { minRearAccumulatorValue5, maxRearAccumulatorValue5, avgRearAccumulatorValue5 },
                                                         { minRearAccumulatorValue6, maxRearAccumulatorValue6, avgRearAccumulatorValue6 }};
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

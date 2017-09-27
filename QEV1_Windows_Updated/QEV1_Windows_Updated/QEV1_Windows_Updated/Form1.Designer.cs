@@ -71,7 +71,7 @@
             this.lblOverviewLatG = new System.Windows.Forms.Label();
             this.lblOverviewLongG = new System.Windows.Forms.Label();
             this.lblOverviewSteeringAngle = new System.Windows.Forms.Label();
-            this.lblOverviewBrakePedalPressure = new System.Windows.Forms.Label();
+            this.lblOverviewBrakeFrontPressure = new System.Windows.Forms.Label();
             this.lblOverviewBrakePedal = new System.Windows.Forms.Label();
             this.lblOverviewAcceleratorPedal = new System.Windows.Forms.Label();
             this.lblOverviewSpeed = new System.Windows.Forms.Label();
@@ -357,6 +357,9 @@
             this.linkToTelemetryServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serialTimer = new System.Windows.Forms.Timer(this.components);
             this.guiUpdateTimer = new System.Windows.Forms.Timer(this.components);
+            this.label59 = new System.Windows.Forms.Label();
+            this.lblOverviewBrakeRearPressure = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.mainScreenTabControl.SuspendLayout();
             this.Overview_Tab.SuspendLayout();
@@ -459,7 +462,7 @@
             this.mainScreenTabControl.Controls.Add(this.Firmware_Tab);
             this.mainScreenTabControl.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mainScreenTabControl.Location = new System.Drawing.Point(0, 41);
-            this.mainScreenTabControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.mainScreenTabControl.Margin = new System.Windows.Forms.Padding(6);
             this.mainScreenTabControl.Name = "mainScreenTabControl";
             this.mainScreenTabControl.SelectedIndex = 0;
             this.mainScreenTabControl.Size = new System.Drawing.Size(2475, 1248);
@@ -480,9 +483,9 @@
             this.Overview_Tab.Controls.Add(this.groupBoxAcc1);
             this.Overview_Tab.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Overview_Tab.Location = new System.Drawing.Point(4, 44);
-            this.Overview_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Overview_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.Overview_Tab.Name = "Overview_Tab";
-            this.Overview_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Overview_Tab.Padding = new System.Windows.Forms.Padding(6);
             this.Overview_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.Overview_Tab.TabIndex = 0;
             this.Overview_Tab.Text = "Overview";
@@ -498,9 +501,9 @@
             this.groupBoxInverter4.Controls.Add(this.label80);
             this.groupBoxInverter4.Controls.Add(this.label81);
             this.groupBoxInverter4.Location = new System.Drawing.Point(1294, 574);
-            this.groupBoxInverter4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxInverter4.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxInverter4.Name = "groupBoxInverter4";
-            this.groupBoxInverter4.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxInverter4.Padding = new System.Windows.Forms.Padding(6);
             this.groupBoxInverter4.Size = new System.Drawing.Size(376, 234);
             this.groupBoxInverter4.TabIndex = 11;
             this.groupBoxInverter4.TabStop = false;
@@ -575,9 +578,9 @@
             this.groupBoxInverter3.Controls.Add(this.label71);
             this.groupBoxInverter3.Controls.Add(this.label72);
             this.groupBoxInverter3.Location = new System.Drawing.Point(889, 574);
-            this.groupBoxInverter3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxInverter3.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxInverter3.Name = "groupBoxInverter3";
-            this.groupBoxInverter3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxInverter3.Padding = new System.Windows.Forms.Padding(6);
             this.groupBoxInverter3.Size = new System.Drawing.Size(378, 234);
             this.groupBoxInverter3.TabIndex = 12;
             this.groupBoxInverter3.TabStop = false;
@@ -652,9 +655,9 @@
             this.groupBoxInverter2.Controls.Add(this.label62);
             this.groupBoxInverter2.Controls.Add(this.label63);
             this.groupBoxInverter2.Location = new System.Drawing.Point(889, 334);
-            this.groupBoxInverter2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxInverter2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxInverter2.Name = "groupBoxInverter2";
-            this.groupBoxInverter2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxInverter2.Padding = new System.Windows.Forms.Padding(6);
             this.groupBoxInverter2.Size = new System.Drawing.Size(378, 220);
             this.groupBoxInverter2.TabIndex = 13;
             this.groupBoxInverter2.TabStop = false;
@@ -722,6 +725,9 @@
             // 
             // groupBoxGeneralStats
             // 
+            this.groupBoxGeneralStats.Controls.Add(this.label59);
+            this.groupBoxGeneralStats.Controls.Add(this.lblOverviewBrakeRearPressure);
+            this.groupBoxGeneralStats.Controls.Add(this.label61);
             this.groupBoxGeneralStats.Controls.Add(this.label45);
             this.groupBoxGeneralStats.Controls.Add(this.label44);
             this.groupBoxGeneralStats.Controls.Add(this.label43);
@@ -734,7 +740,7 @@
             this.groupBoxGeneralStats.Controls.Add(this.lblOverviewLatG);
             this.groupBoxGeneralStats.Controls.Add(this.lblOverviewLongG);
             this.groupBoxGeneralStats.Controls.Add(this.lblOverviewSteeringAngle);
-            this.groupBoxGeneralStats.Controls.Add(this.lblOverviewBrakePedalPressure);
+            this.groupBoxGeneralStats.Controls.Add(this.lblOverviewBrakeFrontPressure);
             this.groupBoxGeneralStats.Controls.Add(this.lblOverviewBrakePedal);
             this.groupBoxGeneralStats.Controls.Add(this.lblOverviewAcceleratorPedal);
             this.groupBoxGeneralStats.Controls.Add(this.lblOverviewSpeed);
@@ -747,9 +753,9 @@
             this.groupBoxGeneralStats.Controls.Add(this.label25);
             this.groupBoxGeneralStats.Controls.Add(this.label24);
             this.groupBoxGeneralStats.Location = new System.Drawing.Point(889, 11);
-            this.groupBoxGeneralStats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxGeneralStats.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxGeneralStats.Name = "groupBoxGeneralStats";
-            this.groupBoxGeneralStats.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxGeneralStats.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxGeneralStats.Size = new System.Drawing.Size(878, 286);
             this.groupBoxGeneralStats.TabIndex = 18;
             this.groupBoxGeneralStats.TabStop = false;
@@ -875,15 +881,15 @@
             this.lblOverviewSteeringAngle.TabIndex = 12;
             this.lblOverviewSteeringAngle.Text = "0";
             // 
-            // lblOverviewBrakePedalPressure
+            // lblOverviewBrakeFrontPressure
             // 
-            this.lblOverviewBrakePedalPressure.AutoSize = true;
-            this.lblOverviewBrakePedalPressure.Location = new System.Drawing.Point(288, 185);
-            this.lblOverviewBrakePedalPressure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblOverviewBrakePedalPressure.Name = "lblOverviewBrakePedalPressure";
-            this.lblOverviewBrakePedalPressure.Size = new System.Drawing.Size(29, 35);
-            this.lblOverviewBrakePedalPressure.TabIndex = 11;
-            this.lblOverviewBrakePedalPressure.Text = "0";
+            this.lblOverviewBrakeFrontPressure.AutoSize = true;
+            this.lblOverviewBrakeFrontPressure.Location = new System.Drawing.Point(288, 185);
+            this.lblOverviewBrakeFrontPressure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOverviewBrakeFrontPressure.Name = "lblOverviewBrakeFrontPressure";
+            this.lblOverviewBrakeFrontPressure.Size = new System.Drawing.Size(29, 35);
+            this.lblOverviewBrakeFrontPressure.TabIndex = 11;
+            this.lblOverviewBrakeFrontPressure.Text = "0";
             // 
             // lblOverviewBrakePedal
             // 
@@ -961,9 +967,9 @@
             this.label3.Location = new System.Drawing.Point(7, 185);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 35);
+            this.label3.Size = new System.Drawing.Size(259, 35);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Brake Pressure:";
+            this.label3.Text = "Front Brake Pressure:";
             // 
             // label4
             // 
@@ -1016,9 +1022,9 @@
             this.groupBoxAcc2.Controls.Add(this.label34);
             this.groupBoxAcc2.Controls.Add(this.label35);
             this.groupBoxAcc2.Location = new System.Drawing.Point(442, 404);
-            this.groupBoxAcc2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxAcc2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxAcc2.Name = "groupBoxAcc2";
-            this.groupBoxAcc2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxAcc2.Padding = new System.Windows.Forms.Padding(6);
             this.groupBoxAcc2.Size = new System.Drawing.Size(402, 404);
             this.groupBoxAcc2.TabIndex = 9;
             this.groupBoxAcc2.TabStop = false;
@@ -1207,7 +1213,7 @@
             // loggingStopStartButton
             // 
             this.loggingStopStartButton.Location = new System.Drawing.Point(524, 310);
-            this.loggingStopStartButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.loggingStopStartButton.Margin = new System.Windows.Forms.Padding(6);
             this.loggingStopStartButton.Name = "loggingStopStartButton";
             this.loggingStopStartButton.Size = new System.Drawing.Size(226, 52);
             this.loggingStopStartButton.TabIndex = 17;
@@ -1219,9 +1225,9 @@
             this.groupBoxCAN.Controls.Add(this.rx_status_label);
             this.groupBoxCAN.Controls.Add(this.label20);
             this.groupBoxCAN.Location = new System.Drawing.Point(524, 161);
-            this.groupBoxCAN.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxCAN.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxCAN.Name = "groupBoxCAN";
-            this.groupBoxCAN.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxCAN.Padding = new System.Windows.Forms.Padding(6);
             this.groupBoxCAN.Size = new System.Drawing.Size(319, 138);
             this.groupBoxCAN.TabIndex = 16;
             this.groupBoxCAN.TabStop = false;
@@ -1252,9 +1258,9 @@
             this.groupBoxSerialTimer.Controls.Add(this.serialLinkSpeedLabel);
             this.groupBoxSerialTimer.Controls.Add(this.label18);
             this.groupBoxSerialTimer.Location = new System.Drawing.Point(524, 11);
-            this.groupBoxSerialTimer.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxSerialTimer.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxSerialTimer.Name = "groupBoxSerialTimer";
-            this.groupBoxSerialTimer.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxSerialTimer.Padding = new System.Windows.Forms.Padding(6);
             this.groupBoxSerialTimer.Size = new System.Drawing.Size(319, 138);
             this.groupBoxSerialTimer.TabIndex = 15;
             this.groupBoxSerialTimer.TabStop = false;
@@ -1290,9 +1296,9 @@
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.profileCurrentCombo);
             this.groupBox4.Location = new System.Drawing.Point(15, 11);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox4.Size = new System.Drawing.Size(495, 380);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
@@ -1319,7 +1325,7 @@
             // editProfilesButton
             // 
             this.editProfilesButton.Location = new System.Drawing.Point(128, 292);
-            this.editProfilesButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.editProfilesButton.Margin = new System.Windows.Forms.Padding(6);
             this.editProfilesButton.Name = "editProfilesButton";
             this.editProfilesButton.Size = new System.Drawing.Size(231, 48);
             this.editProfilesButton.TabIndex = 4;
@@ -1347,7 +1353,7 @@
             "Acceleration",
             "Testing 1"});
             this.profileStartupCombo.Location = new System.Drawing.Point(231, 129);
-            this.profileStartupCombo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileStartupCombo.Margin = new System.Windows.Forms.Padding(6);
             this.profileStartupCombo.Name = "profileStartupCombo";
             this.profileStartupCombo.Size = new System.Drawing.Size(241, 43);
             this.profileStartupCombo.TabIndex = 2;
@@ -1374,7 +1380,7 @@
             "Acceleration",
             "Testing 1"});
             this.profileCurrentCombo.Location = new System.Drawing.Point(231, 50);
-            this.profileCurrentCombo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profileCurrentCombo.Margin = new System.Windows.Forms.Padding(6);
             this.profileCurrentCombo.Name = "profileCurrentCombo";
             this.profileCurrentCombo.Size = new System.Drawing.Size(241, 43);
             this.profileCurrentCombo.TabIndex = 0;
@@ -1389,9 +1395,9 @@
             this.groupBoxInverter1.Controls.Add(this.label53);
             this.groupBoxInverter1.Controls.Add(this.label54);
             this.groupBoxInverter1.Location = new System.Drawing.Point(1294, 334);
-            this.groupBoxInverter1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxInverter1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxInverter1.Name = "groupBoxInverter1";
-            this.groupBoxInverter1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxInverter1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBoxInverter1.Size = new System.Drawing.Size(376, 220);
             this.groupBoxInverter1.TabIndex = 10;
             this.groupBoxInverter1.TabStop = false;
@@ -1478,9 +1484,9 @@
             this.groupBoxAcc1.Controls.Add(this.label56);
             this.groupBoxAcc1.Controls.Add(this.label58);
             this.groupBoxAcc1.Location = new System.Drawing.Point(15, 404);
-            this.groupBoxAcc1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxAcc1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBoxAcc1.Name = "groupBoxAcc1";
-            this.groupBoxAcc1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBoxAcc1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBoxAcc1.Size = new System.Drawing.Size(383, 404);
             this.groupBoxAcc1.TabIndex = 8;
             this.groupBoxAcc1.TabStop = false;
@@ -1673,9 +1679,9 @@
             this.Accumulators_Tab.Controls.Add(this.rearAccumulatorGroupBox);
             this.Accumulators_Tab.Controls.Add(this.frontAccumulatorGroupBox);
             this.Accumulators_Tab.Location = new System.Drawing.Point(4, 44);
-            this.Accumulators_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Accumulators_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.Accumulators_Tab.Name = "Accumulators_Tab";
-            this.Accumulators_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Accumulators_Tab.Padding = new System.Windows.Forms.Padding(6);
             this.Accumulators_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.Accumulators_Tab.TabIndex = 1;
             this.Accumulators_Tab.Text = "Accumulators";
@@ -1690,9 +1696,9 @@
             this.rearAccumulatorBricksGroupBox.Controls.Add(this.rearAccumulatorBrick2);
             this.rearAccumulatorBricksGroupBox.Controls.Add(this.rearAccumulatorBrick1);
             this.rearAccumulatorBricksGroupBox.Location = new System.Drawing.Point(1030, 596);
-            this.rearAccumulatorBricksGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBricksGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBricksGroupBox.Name = "rearAccumulatorBricksGroupBox";
-            this.rearAccumulatorBricksGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBricksGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBricksGroupBox.Size = new System.Drawing.Size(559, 576);
             this.rearAccumulatorBricksGroupBox.TabIndex = 2;
             this.rearAccumulatorBricksGroupBox.TabStop = false;
@@ -1707,9 +1713,9 @@
             this.rearAccumulatorBrick6.Controls.Add(this.maxRearAccumulatorValue6);
             this.rearAccumulatorBrick6.Controls.Add(this.maxRearAccumulatorBrick6);
             this.rearAccumulatorBrick6.Location = new System.Drawing.Point(35, 487);
-            this.rearAccumulatorBrick6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick6.Margin = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick6.Name = "rearAccumulatorBrick6";
-            this.rearAccumulatorBrick6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick6.Padding = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick6.Size = new System.Drawing.Size(495, 81);
             this.rearAccumulatorBrick6.TabIndex = 4;
             this.rearAccumulatorBrick6.TabStop = false;
@@ -1785,9 +1791,9 @@
             this.rearAccumulatorBrick5.Controls.Add(this.maxRearAccumulatorValue5);
             this.rearAccumulatorBrick5.Controls.Add(this.maxRearAccumulatorBrick5);
             this.rearAccumulatorBrick5.Location = new System.Drawing.Point(35, 399);
-            this.rearAccumulatorBrick5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick5.Margin = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick5.Name = "rearAccumulatorBrick5";
-            this.rearAccumulatorBrick5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick5.Padding = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick5.Size = new System.Drawing.Size(495, 81);
             this.rearAccumulatorBrick5.TabIndex = 3;
             this.rearAccumulatorBrick5.TabStop = false;
@@ -1863,9 +1869,9 @@
             this.rearAccumulatorBrick4.Controls.Add(this.maxRearAccumulatorValue4);
             this.rearAccumulatorBrick4.Controls.Add(this.maxRearAccumulatorBrick4);
             this.rearAccumulatorBrick4.Location = new System.Drawing.Point(35, 310);
-            this.rearAccumulatorBrick4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick4.Margin = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick4.Name = "rearAccumulatorBrick4";
-            this.rearAccumulatorBrick4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick4.Padding = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick4.Size = new System.Drawing.Size(495, 81);
             this.rearAccumulatorBrick4.TabIndex = 1;
             this.rearAccumulatorBrick4.TabStop = false;
@@ -1941,9 +1947,9 @@
             this.rearAccumulatorBrick3.Controls.Add(this.maxRearAccumulatorValue3);
             this.rearAccumulatorBrick3.Controls.Add(this.maxRearAccumulatorBrick3);
             this.rearAccumulatorBrick3.Location = new System.Drawing.Point(35, 222);
-            this.rearAccumulatorBrick3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick3.Margin = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick3.Name = "rearAccumulatorBrick3";
-            this.rearAccumulatorBrick3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick3.Padding = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick3.Size = new System.Drawing.Size(495, 81);
             this.rearAccumulatorBrick3.TabIndex = 2;
             this.rearAccumulatorBrick3.TabStop = false;
@@ -2019,9 +2025,9 @@
             this.rearAccumulatorBrick2.Controls.Add(this.maxRearAccumulatorValue2);
             this.rearAccumulatorBrick2.Controls.Add(this.maxRearAccumulatorBrick2);
             this.rearAccumulatorBrick2.Location = new System.Drawing.Point(35, 131);
-            this.rearAccumulatorBrick2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick2.Margin = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick2.Name = "rearAccumulatorBrick2";
-            this.rearAccumulatorBrick2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick2.Padding = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick2.Size = new System.Drawing.Size(495, 81);
             this.rearAccumulatorBrick2.TabIndex = 1;
             this.rearAccumulatorBrick2.TabStop = false;
@@ -2097,9 +2103,9 @@
             this.rearAccumulatorBrick1.Controls.Add(this.minRearAccumulatorValue1);
             this.rearAccumulatorBrick1.Controls.Add(this.minRearAccumulatorBrick1);
             this.rearAccumulatorBrick1.Location = new System.Drawing.Point(35, 42);
-            this.rearAccumulatorBrick1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick1.Margin = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick1.Name = "rearAccumulatorBrick1";
-            this.rearAccumulatorBrick1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorBrick1.Padding = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorBrick1.Size = new System.Drawing.Size(495, 81);
             this.rearAccumulatorBrick1.TabIndex = 0;
             this.rearAccumulatorBrick1.TabStop = false;
@@ -2175,9 +2181,9 @@
             this.frontAccumulatorBricksGroupBox.Controls.Add(this.frontAccumulatorBrick2);
             this.frontAccumulatorBricksGroupBox.Controls.Add(this.frontAccumulatorBrick1);
             this.frontAccumulatorBricksGroupBox.Location = new System.Drawing.Point(1030, 9);
-            this.frontAccumulatorBricksGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBricksGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBricksGroupBox.Name = "frontAccumulatorBricksGroupBox";
-            this.frontAccumulatorBricksGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBricksGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBricksGroupBox.Size = new System.Drawing.Size(559, 580);
             this.frontAccumulatorBricksGroupBox.TabIndex = 0;
             this.frontAccumulatorBricksGroupBox.TabStop = false;
@@ -2192,9 +2198,9 @@
             this.frontAccumulatorBrick6.Controls.Add(this.maxFrontAccumulatorValue6);
             this.frontAccumulatorBrick6.Controls.Add(this.maxFrontAccumulatorBrick6);
             this.frontAccumulatorBrick6.Location = new System.Drawing.Point(35, 487);
-            this.frontAccumulatorBrick6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick6.Margin = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick6.Name = "frontAccumulatorBrick6";
-            this.frontAccumulatorBrick6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick6.Padding = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick6.Size = new System.Drawing.Size(495, 81);
             this.frontAccumulatorBrick6.TabIndex = 4;
             this.frontAccumulatorBrick6.TabStop = false;
@@ -2270,9 +2276,9 @@
             this.frontAccumulatorBrick5.Controls.Add(this.maxFrontAccumulatorValue5);
             this.frontAccumulatorBrick5.Controls.Add(this.maxFrontAccumulatorBrick5);
             this.frontAccumulatorBrick5.Location = new System.Drawing.Point(35, 399);
-            this.frontAccumulatorBrick5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick5.Margin = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick5.Name = "frontAccumulatorBrick5";
-            this.frontAccumulatorBrick5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick5.Padding = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick5.Size = new System.Drawing.Size(495, 81);
             this.frontAccumulatorBrick5.TabIndex = 3;
             this.frontAccumulatorBrick5.TabStop = false;
@@ -2348,9 +2354,9 @@
             this.frontAccumulatorBrick4.Controls.Add(this.maxFrontAccumulatorValue4);
             this.frontAccumulatorBrick4.Controls.Add(this.maxFrontAccumulatorBrick4);
             this.frontAccumulatorBrick4.Location = new System.Drawing.Point(35, 310);
-            this.frontAccumulatorBrick4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick4.Margin = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick4.Name = "frontAccumulatorBrick4";
-            this.frontAccumulatorBrick4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick4.Padding = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick4.Size = new System.Drawing.Size(495, 81);
             this.frontAccumulatorBrick4.TabIndex = 1;
             this.frontAccumulatorBrick4.TabStop = false;
@@ -2426,9 +2432,9 @@
             this.frontAccumulatorBrick3.Controls.Add(this.maxFrontAccumulatorValue3);
             this.frontAccumulatorBrick3.Controls.Add(this.maxFrontAccumulatorBrick3);
             this.frontAccumulatorBrick3.Location = new System.Drawing.Point(35, 222);
-            this.frontAccumulatorBrick3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick3.Margin = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick3.Name = "frontAccumulatorBrick3";
-            this.frontAccumulatorBrick3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick3.Padding = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick3.Size = new System.Drawing.Size(495, 81);
             this.frontAccumulatorBrick3.TabIndex = 2;
             this.frontAccumulatorBrick3.TabStop = false;
@@ -2504,9 +2510,9 @@
             this.frontAccumulatorBrick2.Controls.Add(this.minFrontAccumulatorValue2);
             this.frontAccumulatorBrick2.Controls.Add(this.minFrontAccumulatorBrick2);
             this.frontAccumulatorBrick2.Location = new System.Drawing.Point(35, 131);
-            this.frontAccumulatorBrick2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick2.Margin = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick2.Name = "frontAccumulatorBrick2";
-            this.frontAccumulatorBrick2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick2.Padding = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick2.Size = new System.Drawing.Size(495, 81);
             this.frontAccumulatorBrick2.TabIndex = 1;
             this.frontAccumulatorBrick2.TabStop = false;
@@ -2582,9 +2588,9 @@
             this.frontAccumulatorBrick1.Controls.Add(this.minFrontAccumulatorValue1);
             this.frontAccumulatorBrick1.Controls.Add(this.minFrontAccumulatorBrick1);
             this.frontAccumulatorBrick1.Location = new System.Drawing.Point(35, 42);
-            this.frontAccumulatorBrick1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick1.Margin = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick1.Name = "frontAccumulatorBrick1";
-            this.frontAccumulatorBrick1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorBrick1.Padding = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorBrick1.Size = new System.Drawing.Size(495, 81);
             this.frontAccumulatorBrick1.TabIndex = 0;
             this.frontAccumulatorBrick1.TabStop = false;
@@ -2660,9 +2666,9 @@
             this.rearAccumulatorGroupBox.Controls.Add(this.maxRearAccumulatorLabel);
             this.rearAccumulatorGroupBox.Controls.Add(this.minRearAccumulatorLabel);
             this.rearAccumulatorGroupBox.Location = new System.Drawing.Point(61, 510);
-            this.rearAccumulatorGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorGroupBox.Name = "rearAccumulatorGroupBox";
-            this.rearAccumulatorGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rearAccumulatorGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.rearAccumulatorGroupBox.Size = new System.Drawing.Size(343, 375);
             this.rearAccumulatorGroupBox.TabIndex = 1;
             this.rearAccumulatorGroupBox.TabStop = false;
@@ -2737,9 +2743,9 @@
             this.frontAccumulatorGroupBox.Controls.Add(this.maxFrontAccumulatorsLabel);
             this.frontAccumulatorGroupBox.Controls.Add(this.minFrontAccumulatorsLabel);
             this.frontAccumulatorGroupBox.Location = new System.Drawing.Point(61, 46);
-            this.frontAccumulatorGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorGroupBox.Name = "frontAccumulatorGroupBox";
-            this.frontAccumulatorGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frontAccumulatorGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.frontAccumulatorGroupBox.Size = new System.Drawing.Size(343, 375);
             this.frontAccumulatorGroupBox.TabIndex = 0;
             this.frontAccumulatorGroupBox.TabStop = false;
@@ -2808,9 +2814,9 @@
             // Inverters_Tab
             // 
             this.Inverters_Tab.Location = new System.Drawing.Point(4, 44);
-            this.Inverters_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Inverters_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.Inverters_Tab.Name = "Inverters_Tab";
-            this.Inverters_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Inverters_Tab.Padding = new System.Windows.Forms.Padding(6);
             this.Inverters_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.Inverters_Tab.TabIndex = 2;
             this.Inverters_Tab.Text = "Inverters";
@@ -2822,9 +2828,9 @@
             this.TorqueVectoring_Tab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.TorqueVectoring_Tab.Controls.Add(this.dataGridView1);
             this.TorqueVectoring_Tab.Location = new System.Drawing.Point(4, 44);
-            this.TorqueVectoring_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TorqueVectoring_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.TorqueVectoring_Tab.Name = "TorqueVectoring_Tab";
-            this.TorqueVectoring_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.TorqueVectoring_Tab.Padding = new System.Windows.Forms.Padding(6);
             this.TorqueVectoring_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.TorqueVectoring_Tab.TabIndex = 3;
             this.TorqueVectoring_Tab.Text = "Torque Vectoring";
@@ -2837,7 +2843,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DataSource = this.dataSet1;
             this.dataGridView1.Location = new System.Drawing.Point(6, 11);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(440, 275);
             this.dataGridView1.TabIndex = 0;
@@ -2877,9 +2883,9 @@
             // 
             this.GLV_Tab.Controls.Add(this.tableLayoutPanel1);
             this.GLV_Tab.Location = new System.Drawing.Point(4, 44);
-            this.GLV_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.GLV_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.GLV_Tab.Name = "GLV_Tab";
-            this.GLV_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.GLV_Tab.Padding = new System.Windows.Forms.Padding(6);
             this.GLV_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.GLV_Tab.TabIndex = 4;
             this.GLV_Tab.Text = "Power Management";
@@ -2894,7 +2900,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 578F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 627F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 231F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 264F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 265F));
             this.tableLayoutPanel1.Controls.Add(this.PMnameBox4, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.PMnameBox3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.PMnameBox2, 1, 2);
@@ -2968,7 +2974,7 @@
             this.tableLayoutPanel1.Controls.Add(this.PMnameBox12, 1, 12);
             this.tableLayoutPanel1.Controls.Add(this.PMnameBox13, 1, 13);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 9);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 14;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
@@ -2992,7 +2998,7 @@
             // 
             this.PMnameBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox4.Location = new System.Drawing.Point(170, 372);
-            this.PMnameBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox4.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox4.MaxLength = 16;
             this.PMnameBox4.Name = "PMnameBox4";
             this.PMnameBox4.Size = new System.Drawing.Size(303, 42);
@@ -3002,7 +3008,7 @@
             // 
             this.PMnameBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox3.Location = new System.Drawing.Point(170, 290);
-            this.PMnameBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox3.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox3.MaxLength = 16;
             this.PMnameBox3.Name = "PMnameBox3";
             this.PMnameBox3.Size = new System.Drawing.Size(303, 42);
@@ -3012,7 +3018,7 @@
             // 
             this.PMnameBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox2.Location = new System.Drawing.Point(170, 208);
-            this.PMnameBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox2.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox2.MaxLength = 16;
             this.PMnameBox2.Name = "PMnameBox2";
             this.PMnameBox2.Size = new System.Drawing.Size(303, 42);
@@ -3022,7 +3028,7 @@
             // 
             this.PMtypeLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel2.AutoSize = true;
-            this.PMtypeLabel2.Location = new System.Drawing.Point(534, 211);
+            this.PMtypeLabel2.Location = new System.Drawing.Point(533, 211);
             this.PMtypeLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel2.Name = "PMtypeLabel2";
             this.PMtypeLabel2.Size = new System.Drawing.Size(160, 35);
@@ -3045,7 +3051,7 @@
             // 
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(2008, 35);
+            this.label27.Location = new System.Drawing.Point(2007, 35);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(85, 35);
@@ -3056,7 +3062,7 @@
             // 
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(1583, 35);
+            this.label26.Location = new System.Drawing.Point(1582, 35);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(77, 35);
@@ -3067,7 +3073,7 @@
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(943, 35);
+            this.label23.Location = new System.Drawing.Point(942, 35);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(152, 35);
@@ -3078,7 +3084,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(579, 35);
+            this.label8.Location = new System.Drawing.Point(578, 35);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 35);
@@ -3089,7 +3095,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(281, 35);
+            this.label5.Location = new System.Drawing.Point(280, 35);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 35);
@@ -3112,7 +3118,7 @@
             // 
             this.PMnameBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox1.Location = new System.Drawing.Point(170, 126);
-            this.PMnameBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox1.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox1.MaxLength = 16;
             this.PMnameBox1.Name = "PMnameBox1";
             this.PMnameBox1.Size = new System.Drawing.Size(303, 42);
@@ -3266,7 +3272,7 @@
             this.PMcurrentDrawLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel1.AutoSize = true;
             this.PMcurrentDrawLabel1.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel1.Location = new System.Drawing.Point(2256, 118);
+            this.PMcurrentDrawLabel1.Location = new System.Drawing.Point(2255, 118);
             this.PMcurrentDrawLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel1.Name = "PMcurrentDrawLabel1";
             this.PMcurrentDrawLabel1.Size = new System.Drawing.Size(85, 58);
@@ -3278,7 +3284,7 @@
             this.PMcurrentDrawLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel2.AutoSize = true;
             this.PMcurrentDrawLabel2.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel2.Location = new System.Drawing.Point(2256, 200);
+            this.PMcurrentDrawLabel2.Location = new System.Drawing.Point(2255, 200);
             this.PMcurrentDrawLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel2.Name = "PMcurrentDrawLabel2";
             this.PMcurrentDrawLabel2.Size = new System.Drawing.Size(85, 58);
@@ -3290,7 +3296,7 @@
             this.PMcurrentDrawLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel3.AutoSize = true;
             this.PMcurrentDrawLabel3.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel3.Location = new System.Drawing.Point(2256, 282);
+            this.PMcurrentDrawLabel3.Location = new System.Drawing.Point(2255, 282);
             this.PMcurrentDrawLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel3.Name = "PMcurrentDrawLabel3";
             this.PMcurrentDrawLabel3.Size = new System.Drawing.Size(85, 58);
@@ -3302,7 +3308,7 @@
             this.PMcurrentDrawLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel4.AutoSize = true;
             this.PMcurrentDrawLabel4.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel4.Location = new System.Drawing.Point(2256, 364);
+            this.PMcurrentDrawLabel4.Location = new System.Drawing.Point(2255, 364);
             this.PMcurrentDrawLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel4.Name = "PMcurrentDrawLabel4";
             this.PMcurrentDrawLabel4.Size = new System.Drawing.Size(85, 58);
@@ -3314,7 +3320,7 @@
             this.PMcurrentDrawLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel5.AutoSize = true;
             this.PMcurrentDrawLabel5.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel5.Location = new System.Drawing.Point(2256, 446);
+            this.PMcurrentDrawLabel5.Location = new System.Drawing.Point(2255, 446);
             this.PMcurrentDrawLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel5.Name = "PMcurrentDrawLabel5";
             this.PMcurrentDrawLabel5.Size = new System.Drawing.Size(85, 58);
@@ -3326,7 +3332,7 @@
             this.PMcurrentDrawLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel6.AutoSize = true;
             this.PMcurrentDrawLabel6.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel6.Location = new System.Drawing.Point(2256, 528);
+            this.PMcurrentDrawLabel6.Location = new System.Drawing.Point(2255, 528);
             this.PMcurrentDrawLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel6.Name = "PMcurrentDrawLabel6";
             this.PMcurrentDrawLabel6.Size = new System.Drawing.Size(85, 58);
@@ -3338,7 +3344,7 @@
             this.PMcurrentDrawLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel7.AutoSize = true;
             this.PMcurrentDrawLabel7.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel7.Location = new System.Drawing.Point(2256, 610);
+            this.PMcurrentDrawLabel7.Location = new System.Drawing.Point(2255, 610);
             this.PMcurrentDrawLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel7.Name = "PMcurrentDrawLabel7";
             this.PMcurrentDrawLabel7.Size = new System.Drawing.Size(85, 58);
@@ -3350,7 +3356,7 @@
             this.PMcurrentDrawLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel8.AutoSize = true;
             this.PMcurrentDrawLabel8.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel8.Location = new System.Drawing.Point(2256, 692);
+            this.PMcurrentDrawLabel8.Location = new System.Drawing.Point(2255, 692);
             this.PMcurrentDrawLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel8.Name = "PMcurrentDrawLabel8";
             this.PMcurrentDrawLabel8.Size = new System.Drawing.Size(85, 58);
@@ -3362,7 +3368,7 @@
             this.PMcurrentDrawLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel9.AutoSize = true;
             this.PMcurrentDrawLabel9.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel9.Location = new System.Drawing.Point(2256, 774);
+            this.PMcurrentDrawLabel9.Location = new System.Drawing.Point(2255, 774);
             this.PMcurrentDrawLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel9.Name = "PMcurrentDrawLabel9";
             this.PMcurrentDrawLabel9.Size = new System.Drawing.Size(85, 58);
@@ -3374,7 +3380,7 @@
             this.PMcurrentDrawLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel10.AutoSize = true;
             this.PMcurrentDrawLabel10.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel10.Location = new System.Drawing.Point(2256, 856);
+            this.PMcurrentDrawLabel10.Location = new System.Drawing.Point(2255, 856);
             this.PMcurrentDrawLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel10.Name = "PMcurrentDrawLabel10";
             this.PMcurrentDrawLabel10.Size = new System.Drawing.Size(85, 58);
@@ -3386,7 +3392,7 @@
             this.PMcurrentDrawLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel11.AutoSize = true;
             this.PMcurrentDrawLabel11.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel11.Location = new System.Drawing.Point(2256, 938);
+            this.PMcurrentDrawLabel11.Location = new System.Drawing.Point(2255, 938);
             this.PMcurrentDrawLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel11.Name = "PMcurrentDrawLabel11";
             this.PMcurrentDrawLabel11.Size = new System.Drawing.Size(85, 58);
@@ -3398,7 +3404,7 @@
             this.PMcurrentDrawLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel12.AutoSize = true;
             this.PMcurrentDrawLabel12.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel12.Location = new System.Drawing.Point(2256, 1020);
+            this.PMcurrentDrawLabel12.Location = new System.Drawing.Point(2255, 1020);
             this.PMcurrentDrawLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel12.Name = "PMcurrentDrawLabel12";
             this.PMcurrentDrawLabel12.Size = new System.Drawing.Size(85, 58);
@@ -3410,7 +3416,7 @@
             this.PMcurrentDrawLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMcurrentDrawLabel13.AutoSize = true;
             this.PMcurrentDrawLabel13.Font = new System.Drawing.Font("Calibri", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PMcurrentDrawLabel13.Location = new System.Drawing.Point(2256, 1105);
+            this.PMcurrentDrawLabel13.Location = new System.Drawing.Point(2255, 1105);
             this.PMcurrentDrawLabel13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMcurrentDrawLabel13.Name = "PMcurrentDrawLabel13";
             this.PMcurrentDrawLabel13.Size = new System.Drawing.Size(85, 58);
@@ -3423,7 +3429,7 @@
             this.PMstatusLabel1.AutoSize = true;
             this.PMstatusLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.PMstatusLabel1.ForeColor = System.Drawing.Color.Green;
-            this.PMstatusLabel1.Location = new System.Drawing.Point(2024, 129);
+            this.PMstatusLabel1.Location = new System.Drawing.Point(2023, 129);
             this.PMstatusLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel1.Name = "PMstatusLabel1";
             this.PMstatusLabel1.Size = new System.Drawing.Size(52, 35);
@@ -3434,7 +3440,7 @@
             // 
             this.PMstatusLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel2.AutoSize = true;
-            this.PMstatusLabel2.Location = new System.Drawing.Point(2020, 211);
+            this.PMstatusLabel2.Location = new System.Drawing.Point(2019, 211);
             this.PMstatusLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel2.Name = "PMstatusLabel2";
             this.PMstatusLabel2.Size = new System.Drawing.Size(60, 35);
@@ -3447,7 +3453,7 @@
             this.PMstatusLabel3.AutoSize = true;
             this.PMstatusLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PMstatusLabel3.ForeColor = System.Drawing.Color.DimGray;
-            this.PMstatusLabel3.Location = new System.Drawing.Point(1987, 293);
+            this.PMstatusLabel3.Location = new System.Drawing.Point(1986, 293);
             this.PMstatusLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel3.Name = "PMstatusLabel3";
             this.PMstatusLabel3.Size = new System.Drawing.Size(126, 35);
@@ -3460,7 +3466,7 @@
             this.PMstatusLabel4.AutoSize = true;
             this.PMstatusLabel4.BackColor = System.Drawing.Color.Red;
             this.PMstatusLabel4.ForeColor = System.Drawing.Color.White;
-            this.PMstatusLabel4.Location = new System.Drawing.Point(2018, 375);
+            this.PMstatusLabel4.Location = new System.Drawing.Point(2017, 375);
             this.PMstatusLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel4.Name = "PMstatusLabel4";
             this.PMstatusLabel4.Size = new System.Drawing.Size(65, 35);
@@ -3473,7 +3479,7 @@
             this.PMstatusLabel5.AutoSize = true;
             this.PMstatusLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.PMstatusLabel5.ForeColor = System.Drawing.Color.Red;
-            this.PMstatusLabel5.Location = new System.Drawing.Point(2008, 457);
+            this.PMstatusLabel5.Location = new System.Drawing.Point(2007, 457);
             this.PMstatusLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel5.Name = "PMstatusLabel5";
             this.PMstatusLabel5.Size = new System.Drawing.Size(84, 35);
@@ -3484,7 +3490,7 @@
             // 
             this.PMstatusLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel6.AutoSize = true;
-            this.PMstatusLabel6.Location = new System.Drawing.Point(2020, 539);
+            this.PMstatusLabel6.Location = new System.Drawing.Point(2019, 539);
             this.PMstatusLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel6.Name = "PMstatusLabel6";
             this.PMstatusLabel6.Size = new System.Drawing.Size(60, 35);
@@ -3495,7 +3501,7 @@
             // 
             this.PMstatusLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel7.AutoSize = true;
-            this.PMstatusLabel7.Location = new System.Drawing.Point(2020, 621);
+            this.PMstatusLabel7.Location = new System.Drawing.Point(2019, 621);
             this.PMstatusLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel7.Name = "PMstatusLabel7";
             this.PMstatusLabel7.Size = new System.Drawing.Size(60, 35);
@@ -3506,7 +3512,7 @@
             // 
             this.PMstatusLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel8.AutoSize = true;
-            this.PMstatusLabel8.Location = new System.Drawing.Point(2020, 703);
+            this.PMstatusLabel8.Location = new System.Drawing.Point(2019, 703);
             this.PMstatusLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel8.Name = "PMstatusLabel8";
             this.PMstatusLabel8.Size = new System.Drawing.Size(60, 35);
@@ -3517,7 +3523,7 @@
             // 
             this.PMstatusLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel9.AutoSize = true;
-            this.PMstatusLabel9.Location = new System.Drawing.Point(2020, 785);
+            this.PMstatusLabel9.Location = new System.Drawing.Point(2019, 785);
             this.PMstatusLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel9.Name = "PMstatusLabel9";
             this.PMstatusLabel9.Size = new System.Drawing.Size(60, 35);
@@ -3528,7 +3534,7 @@
             // 
             this.PMstatusLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel10.AutoSize = true;
-            this.PMstatusLabel10.Location = new System.Drawing.Point(2020, 867);
+            this.PMstatusLabel10.Location = new System.Drawing.Point(2019, 867);
             this.PMstatusLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel10.Name = "PMstatusLabel10";
             this.PMstatusLabel10.Size = new System.Drawing.Size(60, 35);
@@ -3539,7 +3545,7 @@
             // 
             this.PMstatusLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel11.AutoSize = true;
-            this.PMstatusLabel11.Location = new System.Drawing.Point(2020, 949);
+            this.PMstatusLabel11.Location = new System.Drawing.Point(2019, 949);
             this.PMstatusLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel11.Name = "PMstatusLabel11";
             this.PMstatusLabel11.Size = new System.Drawing.Size(60, 35);
@@ -3550,7 +3556,7 @@
             // 
             this.PMstatusLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel12.AutoSize = true;
-            this.PMstatusLabel12.Location = new System.Drawing.Point(2020, 1031);
+            this.PMstatusLabel12.Location = new System.Drawing.Point(2019, 1031);
             this.PMstatusLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel12.Name = "PMstatusLabel12";
             this.PMstatusLabel12.Size = new System.Drawing.Size(60, 35);
@@ -3561,7 +3567,7 @@
             // 
             this.PMstatusLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMstatusLabel13.AutoSize = true;
-            this.PMstatusLabel13.Location = new System.Drawing.Point(2020, 1116);
+            this.PMstatusLabel13.Location = new System.Drawing.Point(2019, 1116);
             this.PMstatusLabel13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMstatusLabel13.Name = "PMstatusLabel13";
             this.PMstatusLabel13.Size = new System.Drawing.Size(60, 35);
@@ -3572,7 +3578,7 @@
             // 
             this.PMtypeLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel1.AutoSize = true;
-            this.PMtypeLabel1.Location = new System.Drawing.Point(534, 129);
+            this.PMtypeLabel1.Location = new System.Drawing.Point(533, 129);
             this.PMtypeLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel1.Name = "PMtypeLabel1";
             this.PMtypeLabel1.Size = new System.Drawing.Size(160, 35);
@@ -3583,7 +3589,7 @@
             // 
             this.PMtypeLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel4.AutoSize = true;
-            this.PMtypeLabel4.Location = new System.Drawing.Point(534, 375);
+            this.PMtypeLabel4.Location = new System.Drawing.Point(533, 375);
             this.PMtypeLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel4.Name = "PMtypeLabel4";
             this.PMtypeLabel4.Size = new System.Drawing.Size(160, 35);
@@ -3594,7 +3600,7 @@
             // 
             this.PMtypeLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel3.AutoSize = true;
-            this.PMtypeLabel3.Location = new System.Drawing.Point(534, 293);
+            this.PMtypeLabel3.Location = new System.Drawing.Point(533, 293);
             this.PMtypeLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel3.Name = "PMtypeLabel3";
             this.PMtypeLabel3.Size = new System.Drawing.Size(160, 35);
@@ -3605,7 +3611,7 @@
             // 
             this.PMtypeLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel5.AutoSize = true;
-            this.PMtypeLabel5.Location = new System.Drawing.Point(534, 457);
+            this.PMtypeLabel5.Location = new System.Drawing.Point(533, 457);
             this.PMtypeLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel5.Name = "PMtypeLabel5";
             this.PMtypeLabel5.Size = new System.Drawing.Size(160, 35);
@@ -3616,7 +3622,7 @@
             // 
             this.PMtypeLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel6.AutoSize = true;
-            this.PMtypeLabel6.Location = new System.Drawing.Point(534, 539);
+            this.PMtypeLabel6.Location = new System.Drawing.Point(533, 539);
             this.PMtypeLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel6.Name = "PMtypeLabel6";
             this.PMtypeLabel6.Size = new System.Drawing.Size(160, 35);
@@ -3627,7 +3633,7 @@
             // 
             this.PMtypeLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel7.AutoSize = true;
-            this.PMtypeLabel7.Location = new System.Drawing.Point(534, 621);
+            this.PMtypeLabel7.Location = new System.Drawing.Point(533, 621);
             this.PMtypeLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel7.Name = "PMtypeLabel7";
             this.PMtypeLabel7.Size = new System.Drawing.Size(160, 35);
@@ -3638,7 +3644,7 @@
             // 
             this.PMtypeLabel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel8.AutoSize = true;
-            this.PMtypeLabel8.Location = new System.Drawing.Point(534, 703);
+            this.PMtypeLabel8.Location = new System.Drawing.Point(533, 703);
             this.PMtypeLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel8.Name = "PMtypeLabel8";
             this.PMtypeLabel8.Size = new System.Drawing.Size(160, 35);
@@ -3649,7 +3655,7 @@
             // 
             this.PMtypeLabel9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel9.AutoSize = true;
-            this.PMtypeLabel9.Location = new System.Drawing.Point(534, 785);
+            this.PMtypeLabel9.Location = new System.Drawing.Point(533, 785);
             this.PMtypeLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel9.Name = "PMtypeLabel9";
             this.PMtypeLabel9.Size = new System.Drawing.Size(160, 35);
@@ -3660,7 +3666,7 @@
             // 
             this.PMtypeLabel10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel10.AutoSize = true;
-            this.PMtypeLabel10.Location = new System.Drawing.Point(535, 867);
+            this.PMtypeLabel10.Location = new System.Drawing.Point(534, 867);
             this.PMtypeLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel10.Name = "PMtypeLabel10";
             this.PMtypeLabel10.Size = new System.Drawing.Size(158, 35);
@@ -3671,7 +3677,7 @@
             // 
             this.PMtypeLabel11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel11.AutoSize = true;
-            this.PMtypeLabel11.Location = new System.Drawing.Point(535, 949);
+            this.PMtypeLabel11.Location = new System.Drawing.Point(534, 949);
             this.PMtypeLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel11.Name = "PMtypeLabel11";
             this.PMtypeLabel11.Size = new System.Drawing.Size(158, 35);
@@ -3682,7 +3688,7 @@
             // 
             this.PMtypeLabel12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel12.AutoSize = true;
-            this.PMtypeLabel12.Location = new System.Drawing.Point(535, 1031);
+            this.PMtypeLabel12.Location = new System.Drawing.Point(534, 1031);
             this.PMtypeLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel12.Name = "PMtypeLabel12";
             this.PMtypeLabel12.Size = new System.Drawing.Size(158, 35);
@@ -3693,7 +3699,7 @@
             // 
             this.PMtypeLabel13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMtypeLabel13.AutoSize = true;
-            this.PMtypeLabel13.Location = new System.Drawing.Point(535, 1116);
+            this.PMtypeLabel13.Location = new System.Drawing.Point(534, 1116);
             this.PMtypeLabel13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PMtypeLabel13.Name = "PMtypeLabel13";
             this.PMtypeLabel13.Size = new System.Drawing.Size(158, 35);
@@ -3704,7 +3710,7 @@
             // 
             this.PMnameBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox5.Location = new System.Drawing.Point(170, 454);
-            this.PMnameBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox5.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox5.MaxLength = 16;
             this.PMnameBox5.Name = "PMnameBox5";
             this.PMnameBox5.Size = new System.Drawing.Size(303, 42);
@@ -3714,7 +3720,7 @@
             // 
             this.PMnameBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox6.Location = new System.Drawing.Point(170, 536);
-            this.PMnameBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox6.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox6.MaxLength = 16;
             this.PMnameBox6.Name = "PMnameBox6";
             this.PMnameBox6.Size = new System.Drawing.Size(303, 42);
@@ -3724,7 +3730,7 @@
             // 
             this.PMnameBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox7.Location = new System.Drawing.Point(170, 618);
-            this.PMnameBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox7.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox7.MaxLength = 16;
             this.PMnameBox7.Name = "PMnameBox7";
             this.PMnameBox7.Size = new System.Drawing.Size(303, 42);
@@ -3734,7 +3740,7 @@
             // 
             this.PMnameBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox8.Location = new System.Drawing.Point(170, 700);
-            this.PMnameBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox8.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox8.MaxLength = 16;
             this.PMnameBox8.Name = "PMnameBox8";
             this.PMnameBox8.Size = new System.Drawing.Size(303, 42);
@@ -3744,7 +3750,7 @@
             // 
             this.PMnameBox9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox9.Location = new System.Drawing.Point(170, 782);
-            this.PMnameBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox9.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox9.MaxLength = 16;
             this.PMnameBox9.Name = "PMnameBox9";
             this.PMnameBox9.Size = new System.Drawing.Size(303, 42);
@@ -3754,7 +3760,7 @@
             // 
             this.PMnameBox10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox10.Location = new System.Drawing.Point(170, 864);
-            this.PMnameBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox10.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox10.MaxLength = 16;
             this.PMnameBox10.Name = "PMnameBox10";
             this.PMnameBox10.Size = new System.Drawing.Size(303, 42);
@@ -3764,7 +3770,7 @@
             // 
             this.PMnameBox11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox11.Location = new System.Drawing.Point(170, 946);
-            this.PMnameBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox11.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox11.MaxLength = 16;
             this.PMnameBox11.Name = "PMnameBox11";
             this.PMnameBox11.Size = new System.Drawing.Size(303, 42);
@@ -3774,7 +3780,7 @@
             // 
             this.PMnameBox12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox12.Location = new System.Drawing.Point(170, 1028);
-            this.PMnameBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox12.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox12.MaxLength = 16;
             this.PMnameBox12.Name = "PMnameBox12";
             this.PMnameBox12.Size = new System.Drawing.Size(303, 42);
@@ -3784,7 +3790,7 @@
             // 
             this.PMnameBox13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PMnameBox13.Location = new System.Drawing.Point(170, 1113);
-            this.PMnameBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PMnameBox13.Margin = new System.Windows.Forms.Padding(4);
             this.PMnameBox13.MaxLength = 16;
             this.PMnameBox13.Name = "PMnameBox13";
             this.PMnameBox13.Size = new System.Drawing.Size(303, 42);
@@ -3793,9 +3799,9 @@
             // Cooling_Tab
             // 
             this.Cooling_Tab.Location = new System.Drawing.Point(4, 44);
-            this.Cooling_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Cooling_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.Cooling_Tab.Name = "Cooling_Tab";
-            this.Cooling_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Cooling_Tab.Padding = new System.Windows.Forms.Padding(6);
             this.Cooling_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.Cooling_Tab.TabIndex = 5;
             this.Cooling_Tab.Text = "Cooling";
@@ -3804,9 +3810,9 @@
             // Safety_Tab
             // 
             this.Safety_Tab.Location = new System.Drawing.Point(4, 44);
-            this.Safety_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Safety_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.Safety_Tab.Name = "Safety_Tab";
-            this.Safety_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Safety_Tab.Padding = new System.Windows.Forms.Padding(6);
             this.Safety_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.Safety_Tab.TabIndex = 6;
             this.Safety_Tab.Text = "Safety";
@@ -3815,9 +3821,9 @@
             // IOsetup_Tab
             // 
             this.IOsetup_Tab.Location = new System.Drawing.Point(4, 44);
-            this.IOsetup_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.IOsetup_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.IOsetup_Tab.Name = "IOsetup_Tab";
-            this.IOsetup_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.IOsetup_Tab.Padding = new System.Windows.Forms.Padding(6);
             this.IOsetup_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.IOsetup_Tab.TabIndex = 8;
             this.IOsetup_Tab.Text = "IO Setup";
@@ -3830,9 +3836,9 @@
             this.Diagnostics_Tab.Controls.Add(this.groupBox5);
             this.Diagnostics_Tab.Controls.Add(this.CANrichTextBox);
             this.Diagnostics_Tab.Location = new System.Drawing.Point(4, 44);
-            this.Diagnostics_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Diagnostics_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.Diagnostics_Tab.Name = "Diagnostics_Tab";
-            this.Diagnostics_Tab.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Diagnostics_Tab.Padding = new System.Windows.Forms.Padding(6);
             this.Diagnostics_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.Diagnostics_Tab.TabIndex = 7;
             this.Diagnostics_Tab.Text = "Diagnostics";
@@ -3851,7 +3857,7 @@
             // balancingButton
             // 
             this.balancingButton.Location = new System.Drawing.Point(1073, 83);
-            this.balancingButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.balancingButton.Margin = new System.Windows.Forms.Padding(6);
             this.balancingButton.Name = "balancingButton";
             this.balancingButton.Size = new System.Drawing.Size(158, 74);
             this.balancingButton.TabIndex = 2;
@@ -3870,9 +3876,9 @@
             this.groupBox5.Controls.Add(this.checkBox2);
             this.groupBox5.Controls.Add(this.checkBox1);
             this.groupBox5.Location = new System.Drawing.Point(31, 11);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox5.Size = new System.Drawing.Size(950, 185);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
@@ -3884,7 +3890,7 @@
             this.checkBox5.Checked = true;
             this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox5.Location = new System.Drawing.Point(446, 103);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(111, 39);
             this.checkBox5.TabIndex = 9;
@@ -3897,7 +3903,7 @@
             this.checkBox6.Checked = true;
             this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox6.Location = new System.Drawing.Point(446, 50);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(93, 39);
             this.checkBox6.TabIndex = 8;
@@ -3907,7 +3913,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(634, 103);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(248, 50);
             this.button2.TabIndex = 7;
@@ -3918,7 +3924,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(634, 33);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(248, 50);
             this.button1.TabIndex = 6;
@@ -3932,7 +3938,7 @@
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(204, 103);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(219, 39);
             this.checkBox3.TabIndex = 3;
@@ -3945,7 +3951,7 @@
             this.checkBox4.Checked = true;
             this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox4.Location = new System.Drawing.Point(35, 103);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(85, 39);
             this.checkBox4.TabIndex = 2;
@@ -3958,7 +3964,7 @@
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Location = new System.Drawing.Point(204, 50);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(197, 39);
             this.checkBox2.TabIndex = 1;
@@ -3971,7 +3977,7 @@
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(35, 50);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(6);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(144, 39);
             this.checkBox1.TabIndex = 0;
@@ -3981,7 +3987,7 @@
             // CANrichTextBox
             // 
             this.CANrichTextBox.Location = new System.Drawing.Point(31, 222);
-            this.CANrichTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.CANrichTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.CANrichTextBox.Name = "CANrichTextBox";
             this.CANrichTextBox.Size = new System.Drawing.Size(946, 927);
             this.CANrichTextBox.TabIndex = 0;
@@ -3992,7 +3998,7 @@
             this.Firmware_Tab.Controls.Add(this.firmwareTextBox);
             this.Firmware_Tab.Controls.Add(this.firmwareLaunch);
             this.Firmware_Tab.Location = new System.Drawing.Point(4, 44);
-            this.Firmware_Tab.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Firmware_Tab.Margin = new System.Windows.Forms.Padding(6);
             this.Firmware_Tab.Name = "Firmware_Tab";
             this.Firmware_Tab.Size = new System.Drawing.Size(2467, 1200);
             this.Firmware_Tab.TabIndex = 9;
@@ -4002,7 +4008,7 @@
             // firmwareTextBox
             // 
             this.firmwareTextBox.Location = new System.Drawing.Point(39, 111);
-            this.firmwareTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.firmwareTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.firmwareTextBox.Name = "firmwareTextBox";
             this.firmwareTextBox.Size = new System.Drawing.Size(1038, 1021);
             this.firmwareTextBox.TabIndex = 1;
@@ -4011,7 +4017,7 @@
             // firmwareLaunch
             // 
             this.firmwareLaunch.Location = new System.Drawing.Point(39, 44);
-            this.firmwareLaunch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.firmwareLaunch.Margin = new System.Windows.Forms.Padding(6);
             this.firmwareLaunch.Name = "firmwareLaunch";
             this.firmwareLaunch.Size = new System.Drawing.Size(138, 55);
             this.firmwareLaunch.TabIndex = 0;
@@ -4112,6 +4118,36 @@
             // 
             this.guiUpdateTimer.Tick += new System.EventHandler(this.guiUpdateTimer_Tick);
             // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(355, 234);
+            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(71, 35);
+            this.label59.TabIndex = 26;
+            this.label59.Text = "units";
+            // 
+            // lblOverviewBrakeRearPressure
+            // 
+            this.lblOverviewBrakeRearPressure.AutoSize = true;
+            this.lblOverviewBrakeRearPressure.Location = new System.Drawing.Point(289, 234);
+            this.lblOverviewBrakeRearPressure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOverviewBrakeRearPressure.Name = "lblOverviewBrakeRearPressure";
+            this.lblOverviewBrakeRearPressure.Size = new System.Drawing.Size(29, 35);
+            this.lblOverviewBrakeRearPressure.TabIndex = 25;
+            this.lblOverviewBrakeRearPressure.Text = "0";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(8, 234);
+            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(249, 35);
+            this.label61.TabIndex = 24;
+            this.label61.Text = "Rear Brake Pressure:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -4121,7 +4157,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(2600, 1500);
             this.MinimizeBox = false;
@@ -4459,7 +4495,7 @@
         private System.Windows.Forms.Label lblOverviewLatG;
         private System.Windows.Forms.Label lblOverviewLongG;
         private System.Windows.Forms.Label lblOverviewSteeringAngle;
-        private System.Windows.Forms.Label lblOverviewBrakePedalPressure;
+        private System.Windows.Forms.Label lblOverviewBrakeFrontPressure;
         private System.Windows.Forms.Label lblOverviewBrakePedal;
         private System.Windows.Forms.Label lblOverviewAcceleratorPedal;
         private System.Windows.Forms.Label lblOverviewSpeed;
@@ -4532,5 +4568,8 @@
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Timer guiUpdateTimer;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label lblOverviewBrakeRearPressure;
+        private System.Windows.Forms.Label label61;
     }
 }
