@@ -70,6 +70,18 @@ namespace QEV1_Windows_Updated
         public const int DISCONNECT = 1;
         public const int CONNECT = 128;
 
+        public enum packetFormat
+        {
+            header = 0,
+            sequence = 1,
+            packetLength = 2,
+            viewPage = 3,
+            viewData = 4,
+            parameter = 5,
+            data0 = 7
+            // Variable data length, therefore no check sum here
+        }
+
         public enum connectSerialCodes {
             connectNoPorts, 
             connectPorts,
@@ -173,11 +185,12 @@ namespace QEV1_Windows_Updated
         /// <summary>
         /// Reads and analyses an incoming stream of bytes
         /// </summary>
-        public void processIncomingBytestream()
+        public Packet processIncomingBytestream()
         {
             try
             {
                 byte tempByte;
+                Packet newPacket;
 
                 // While there is still information to be processed
                 while (qevSerialPort.BytesToRead > 0)
@@ -212,6 +225,7 @@ namespace QEV1_Windows_Updated
                     // Return to ready mode for next time
                     messageMode = READYMODE;
 
+                    /*
                     // Restore the 68's (???)
                     for (int i = 0; i < 4; i++)
                     {
@@ -221,6 +235,7 @@ namespace QEV1_Windows_Updated
                         }
                     }
 
+                    
                     headerType = incomingMessage[INDEX_HEADERTYPE];
 
                     // Do something based on headertype
@@ -244,12 +259,34 @@ namespace QEV1_Windows_Updated
                     rpm = (incomingMessage[INDEX_RPM] << 8) + incomingMessage[INDEX_RPM + 1];
                     enable = incomingMessage[INDEX_ENABLE];
                     // If enable == 0 do something, else to something else
+                    */
+                    newPacket = new Packet(
+                        incomingMessage[(int)packetFormat.header], // Packet Header
+                        incomingMessage[(int)packetFormat.sequence], // Packet Sequence
+                        incomingMessage[(int)packetFormat.packetLength], // Packet Length
+                        incomingMessage[(int)packetFormat.viewPage], // Packet View Page
+                        incomingMessage[(int)packetFormat.viewData], // Packet View Data
+                        incomingMessage[(int)packetFormat.parameter], // Packet Parameter Byte 1
+                        incomingMessage[(int)packetFormat.parameter + 1], // Packet Parameter Byte 2
+                        incomingMessage[incomingMessage[(int)packetFormat.packetLength] - 2], // Packet Check Sum Byte 1
+                        incomingMessage[incomingMessage[(int)packetFormat.packetLength] - 1]); // Packet Check Sum Byte 2
+
+                    for (int i = incomingMessage[(int)packetFormat.data0]; i < newPacket.PacketLength - 3; i++)
+                    {
+                        newPacket.AddMessage(incomingMessage[i]);
+                    }
+                    return newPacket;
                 }
-            } catch
+                return null;
+
+
+            }
+            catch
             {
                 MessageBox.Show("Error reading ports", "Port Error");
             }
-            
+            return null;
+
         }
 
         public void setAddressChunk(ushort value)
