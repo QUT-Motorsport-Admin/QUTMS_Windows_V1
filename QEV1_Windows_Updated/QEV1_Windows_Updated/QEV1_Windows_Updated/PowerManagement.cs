@@ -6,41 +6,27 @@ using System.Windows.Forms;
 
 namespace QEV1_Windows_Updated
 {
-    public class PowerManagement
+    static class PowerManagement
     {
-        // Declare address variables.
-        private int NameAddress_First;
-        private int ConfigAddress_First;
-        private int TCBAddress_First;
-        private int NameAddress_Seperation;
-        private int ConfigAddress_Seperation;
-        private int TCBAddress_Seperation;
-
-        public PowerManagement()
-        {
-            // Set address variables.
-            NameAddress_First = 200;
-            ConfigAddress_First = 390;
-            TCBAddress_First = 410;
-            NameAddress_Seperation = 16;
-            ConfigAddress_Seperation = 1;
-            TCBAddress_Seperation = 1;
-    }
-
         // Get address variables.
-        public int GetChannelNameAddress(int ChannelNumber)
+        public static int GetAddress(int ChannelNumber, int FirstAddress, int Address_Seperation)
         {
-            return NameAddress_First + (ChannelNumber - 1) * NameAddress_Seperation;
+            return FirstAddress + (ChannelNumber - 1) * Address_Seperation;
         }
 
-        public int GetChannelConfigAddress(int ChannelNumber)
+        public static int GetChannelNameAddress(int ChannelNumber)
         {
-            return ConfigAddress_First + (ChannelNumber - 1) * ConfigAddress_Seperation;
+            return GetAddress(ChannelNumber, 200, 16);
         }
 
-        public int GetTCBAddress(int ChannelNumber)
+        public static int GetChannelConfigAddress(int ChannelNumber)
         {
-            return TCBAddress_First + (ChannelNumber - 1) * TCBAddress_Seperation;
+            return GetAddress(ChannelNumber, 390, 1);
+        }
+
+        public static int GetTCBAddress(int ChannelNumber)
+        {
+            return GetAddress(ChannelNumber, 410, 1);
         }
     }
 }

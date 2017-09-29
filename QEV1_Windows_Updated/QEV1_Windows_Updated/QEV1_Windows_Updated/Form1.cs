@@ -360,9 +360,12 @@ namespace QEV1_Windows_Updated
             {
                 Packet currentPacket = qevSerialCom.GetNextPacket();
                 statusStripErrorFlag.Text = "No Errors";
-                
-                // Update the GUI depending on packet contents and current tab index
 
+                // Update the GUI depending on packet contents and current tab index
+                if (mainScreenTabControl.SelectedTab.Text == "Power Management")
+                {
+                    PMstatusLabel6.Text = "DISABLED";
+                }
             }
 
             catch
