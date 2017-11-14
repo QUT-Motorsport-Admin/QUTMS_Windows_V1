@@ -44,7 +44,7 @@ namespace QEV1_Windows_Updated
         private Label[,] rearAccumulatorValues;
 
         SerialCommunication qevSerialCom;
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -355,6 +355,14 @@ namespace QEV1_Windows_Updated
 
         private void guiUpdateTimer_Tick(object sender, EventArgs e)
         {
+            // Test GUI code here for now until packets are avaliable to read.
+            if (mainScreenTabControl.SelectedIndex == 4)
+            {
+                PMstatusLabel6.Text = "DISABLED";
+                PMstatusLabel6.ForeColor = System.Drawing.Color.DimGray;
+                PMstatusLabel6.BackColor = Color.FromArgb(224,224,224);
+            }
+
             // Read the next packet
             try
             {
@@ -362,10 +370,6 @@ namespace QEV1_Windows_Updated
                 statusStripErrorFlag.Text = "No Errors";
 
                 // Update the GUI depending on packet contents and current tab index
-                if (mainScreenTabControl.SelectedTab.Text == "Power Management")
-                {
-                    PMstatusLabel6.Text = "DISABLED";
-                }
             }
 
             catch
