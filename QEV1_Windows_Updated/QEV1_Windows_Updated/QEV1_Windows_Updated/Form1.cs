@@ -356,11 +356,43 @@ namespace QEV1_Windows_Updated
         private void guiUpdateTimer_Tick(object sender, EventArgs e)
         {
             // Test GUI code here for now until packets are avaliable to read.
+            Packet testPacket = new Packet(0,0,10,5,1,0,0,0,0);
+            testPacket.AddMessage(2);
             if (mainScreenTabControl.SelectedIndex == 4)
             {
-                PMstatusLabel6.Text = "DISABLED";
-                PMstatusLabel6.ForeColor = System.Drawing.Color.DimGray;
-                PMstatusLabel6.BackColor = Color.FromArgb(224,224,224);
+                byte[] packetData = testPacket.getMessagesAsArray();
+                switch (packetData[0])
+                {
+                    case 0:
+                        PMstatusLabel6.Text = "ON";
+                        PMstatusLabel6.ForeColor = System.Drawing.Color.Green;
+                        PMstatusLabel6.BackColor = Color.FromArgb(192, 255, 192);
+                        break;
+
+                    case 1:
+                        PMstatusLabel6.Text = "OFF";
+                        PMstatusLabel6.ForeColor = System.Drawing.Color.Black;
+                        PMstatusLabel6.BackColor = System.Drawing.Color.Transparent;
+                        break;
+
+                    case 2:
+                        PMstatusLabel6.Text = "DISABLED";
+                        PMstatusLabel6.ForeColor = System.Drawing.Color.DimGray;
+                        PMstatusLabel6.BackColor = Color.FromArgb(224, 224, 224);
+                        break;
+
+                    case 3:
+                        PMstatusLabel6.Text = "TRIP";
+                        PMstatusLabel6.ForeColor = System.Drawing.Color.White;
+                        PMstatusLabel6.BackColor = System.Drawing.Color.Red;
+                        break;
+
+                    case 4:
+                        PMstatusLabel6.Text = "FAULT";
+                        PMstatusLabel6.ForeColor = System.Drawing.Color.DimGray;
+                        PMstatusLabel6.BackColor = Color.FromArgb(255, 192, 192);
+                        break;
+                }
             }
 
             // Read the next packet
