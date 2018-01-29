@@ -79,7 +79,7 @@ namespace QEV1_Windows_Updated
             viewData = 4,
             parameter = 5,
             data0 = 7
-            // Variable data length, therefore no check sum here
+            // Variable data length, therefore no check sum here due to varying position
         }
 
         public enum connectSerialCodes {
@@ -316,15 +316,15 @@ namespace QEV1_Windows_Updated
             // Put the input value to buffer one
             tempBuffer[1] = putVal;
 
-            // But the addr_chunk data into the buffer
+            // Put the addr_chunk data into the buffer
             tempBuffer[2] = (byte)(addr_chunk >> 8);        //address section top byte
             tempBuffer[3] = (byte)addr_chunk;               //address section lower byte
 
             // Put the data chunck into the buffer
             tempBuffer[4] = (byte)(data_chunk >> 24);       //data section very top byte
-            tempBuffer[5] = (byte)(data_chunk >> 16);       //data section very top byte
-            tempBuffer[6] = (byte)(data_chunk >> 8);        //data Section second top byte
-            tempBuffer[7] = (byte)data_chunk;               //data section second lowest byte
+            tempBuffer[5] = (byte)(data_chunk >> 16);       //data section second top byte
+            tempBuffer[6] = (byte)(data_chunk >> 8);        //data Section second lowest byte
+            tempBuffer[7] = (byte)data_chunk;               //data section very lowest byte
 
             // Write the data to the serial port
             qevSerialPort.Write(tempBuffer, 0, 10);
@@ -396,7 +396,5 @@ namespace QEV1_Windows_Updated
         {
             return packetQueue.Dequeue();
         }
-
-
     }
 }
